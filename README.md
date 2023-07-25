@@ -20,9 +20,9 @@ Otros: Ofreceremos distintos accesorios para el uso de ellos en la actividad dep
 
 Integrantes
 
-Alfredo Alvarez: Tengo 26 años, vivo en Barranquilla, Colombia, actualmente trabajo como analista de pruebas en la sección tecnologica de una gasera, soy ingeniero industrial de profesión, me gusta el futbol y mi equipo preferido es el junior de Barranquilla.
+Alfredo Alvarez: Tengo 26 años, vivo en Barranquilla, Colombia, actualmente trabajo como analista de pruebas en la sección tecnologica de una gasera, soy ingeniero industrial de profesión, me gusta el futbol y mi equipo preferido es el junior de Barranquilla.git 
 
-Agustin Acosta: Tengo 24 años, vivo en Buenos Aires - Tandil, actualmente trabajo en una panaderia, soy barbero de profesión, tengo 2 años de experiencia en programación, me gusta la musica y me gusta leer libros acerca de la psicologia.
+Agustin Acosta: Tengo 24 años, vivo en Buenos Aires - Tandil, actualmente trabajo en una panaderia, soy barbero de profesión, tengo 2 años de experiencia en programación, me gusta la musica en general y tambien leer libros acerca de la psicologia,soy muy sociable y incha de boca por su puesto
 
 Fabian Trigos: Tengo 39 años, vivo en Ocaña, Colombia, tengo un hijo, soy ingeniero de sistemas, actualmente tengo 13 años de trabajar en un banco, me gusta el futbol, toco guitarra, me gusta coleccionar motos a escala
 
