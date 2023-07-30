@@ -33,7 +33,7 @@ Agustin Acosta: Tengo 24 años, vivo en Buenos Aires - Tandil, actualmente traba
 
 Fabian Trigos: Tengo 39 años, vivo en Ocaña, Colombia, tengo un hijo, soy ingeniero de sistemas, actualmente tengo 13 años de trabajar en un banco, me gusta el futbol, toco guitarra, me gusta coleccionar motos a escala
 
-Cristian Villafañe:
+Cristian Villafañe: tengo 37 años, vivo en la localidad de Lanús - Provincia de Buenos Aires. Actualmente estudio Licenciatura en informática y trabajo como soporte técnico. Me gusta muchos hacer deportes en general. Hincha fanático de Boca Juniors. 
 
 URL de los e-commerce
 
