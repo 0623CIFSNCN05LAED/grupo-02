@@ -1,0 +1,15 @@
+{
+  "name": "grupo-02",
+  "version": "1.0.0",
+  "description": "¿Qué productos o servicios brindará nuestro sitio?\r Nuestro e-commerce Fuerza y disciplina brindará la posibilidad de comprar maquinas y elementos para realizar ejercicios de fuerza, todo lo que necesites para adecuar tu espacio para realizar esta actividad deportiva lo encontrarás en nuestra tienda.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
