@@ -8,7 +8,7 @@ const publicPath = path.join(__dirname,'../public');
 app.use(express.static(publicPath));
 
 //se definen las rutas a cada uno de los recursos de la aplicacion
-app.get('/home',function(req,res){
+app.get('/',function(req,res){
     const homePath = path.join(__dirname,'/views/home.html');
     res.sendFile(homePath);
 });
