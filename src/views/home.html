@@ -1,14 +1,131 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="/css/home.css">
-
-    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <linj rel="stylesheet" href="/css/normalize.css"/>
+    <link rel="stylesheet" href="/css/home.css" />
+   
+    <title>Fuerza y Disciplina</title>
 </head>
-<body>
-    <h1>ESTA ES LA PAGINA DEL HOME </h1>
-</body>
-</html>
+<body class ="bg-light-grey">
+    <header class="bg-grey p-1 flex flex-wrap">
+        <h1 class="w-50">
+            <img src="/images/LOGO.jpeg" alt="LOGO">
+        </h1>
+        <div class="p-2 w-50 align-center">
+            <form action="/" class="p-1 flex radius-1 bg-white">
+                <input class="flex-grow b-none outline-none font-xl" type="text" name="search"
+                placeholder="Buscar" />
+                <button type="submit" class="bg-white b-none">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+        </div>
+
+        <img class="w-100"  src="/images/carrusel-de-imagenes.jpg" alt="carrusel-de-imagenes">
+        
+        <nav>
+            <ul style="padding: 0px" >
+
+                <li><a href="#">HOME</a> <a href="#">PESAS</a> <a href="#">BARRAS</a> <a href="#">MAQUINAS</a> <a href="#">OTROS</a></li>
+                
+            </ul>
+            <ul style="padding: 0px">
+                
+                <li><a href="/productDetail">Estado del Pedido</a> <i class="fa-regular fa-id-card"></i></li>
+                <li><a href="/productCart">Mi compras</a> <i class="fa-solid fa-basket-shopping"></i></li>
+                <li><a href="/login">Ingresar</a> <i class="fa-solid fa-right-to-bracket"></i></li>
+                </li>
+            </ul>
+        </nav>
+        <div class="text-center w-100">
+            <i class="fa-solid fa-bars p-1 bg-blue radius-1 color-white bold"></i>
+        </div>
+    </header> 
+    
+    
+     
+    <main class="p-1 wv-90 mx-auto">
+        <section class="p-1 flex flex-wrap gap">
+            <h2 class="title w-100">
+                Basado en tu última visita
+            </h2>
+            <article class="mb-10 bg-white md-product-shadow w-100 md-w-50 lg-w-25">
+                <img class= w-100 src="/images/img-cafetera-moulinex.jpg" alt="img-cafetera-moulinex">
+                <div class="bt-1 border-grey p-1 relative flex flex-wrap">
+                    <i class="fa-solid fa-truck truck-icon"></i>
+                    <p class="text-xl mr-1">$6.770</p>
+                    <p class="color-green text-lg">40% OFF</p>
+                    <h3 class="text-lg description w-100">Cafetera Moulinex</h3>
+                </div>
+            </article>
+            <article class="mb-10 bg-white md-product-shadow w-100 md-w-50 lg-w-25">
+                <img class= w-100 src="/images/img-macbook-pro-2019.jpg" alt="img-macbook-pro-2019">
+                <div class="bt-1 border-grey p-1 relative flex flex-wrap">
+                    <i class="fa-solid fa-truck truck-icon"></i>
+                    <p class="text-xl mr-1">$230.000</p>
+                    <p class="color-green text-lg">20% off</p>
+                    <h3 class="text-lg description w-100">MacBook Pro 2019</h3>
+                </div>
+            </article>
+            <article class="mb-10 bg-white md-product-shadow w-100 md-w-50 lg-w-25">
+                <img class= w-100 src="/images/img-samsung-galaxy-s10.jpg" alt="img-samsung-galaxy-s10.jpg">
+                <div class="bt-1 border-grey p-1 relative flex flex-wrap">
+                    <i class="fa-solid fa-truck truck-icon"></i>
+                    <p class="text-xl mr-1">$70.500</p>
+                    <p class="color-green text-lg">10% off</p>
+                    <h3 class="text-lg description w-100">Samsung Galaxy S10</h3>
+                </div>
+            </article>
+            <article class="mb-10 bg-white md-product-shadow w-100 md-w-50 lg-w-25">
+                <img class= w-100 src="/images/img-tv-samsung-smart.jpg" alt="img-tv-samsung-smart.jpg">
+                <div class="bt-1 border-grey p-1 relative flex flex-wrap">
+                    <i class="fa-solid fa-truck truck-icon"></i>
+                    <p class="text-xl mr-1">$23.200</p>
+                    <p class="color-green text-lg">5% off</p>
+                    <h3 class="text-lg description w-100">SmartTv Samsung 43"</h3>
+                </div>
+            </article>
+   
+        </main> 
+        <footer class="text-center bg-white p-1 flex flex-wrap">
+                        
+                <article class="mx-auto">
+                    <p class="text-center w-100 my-0 "><i class="fa-solid fa-credit-card my-d" style="color: #2a5298;"></i></p>
+                    <p class="text-center w-100 my-0"><i><h3 class="my-0">Pagá con tarjeta o en efectivo</h3></i></p>
+                    <p class="text-center w-100 my-0"><i>Con Mercado Liebre Cash, tenés cuotas sin</i></p>
+                    <p class="text-center w-100 my-0"><i>interés con tarjeta o efectivo en</i></p>
+                    <p class="text-center w-100 my-0"><i>puntos de pago. ¡Y siempre es seguro!</i></p>   
+                </article>
+                <article class="mx-auto">
+                    <p class="text-center w-100 my-0 "><i class="fa-solid fa-gift my-d" style="color:  #2a5298;"></i></p>
+                    <p class="text-center w-100 my-0"><i><h3 class="my-0">Envío gratis desde $ 2.500</h3></i></p>
+                    <p class="text-center w-100 my-0"><i>Solo por estar registrad@ en Mercado Liebre</i></p>
+                    <p class="text-center w-100 my-0"><i>tenés envíos gratis en miles de productos. Es</i></p>
+                    <p class="text-center w-100 my-0"><i>un beneficio de Mercado Puntos.</i></p>   
+                </article>
+                <article class="mx-auto">
+                    <p class="text-center w-100 my-0 "><i class="fa-solid fa-user-shield my-d" style="color:  #2a5298;"></i></i></p>
+                    <p class="text-center w-100 my-0"><i><h3 class="my-0">Seguridad, de principio a fin</h3></i></p>
+                    <p class="text-center w-100 my-0"><i>¿No te gusta? ¡Devolvelo! En Mercado Liebre,</i></p>
+                    <p class="text-center w-100 my-0"><i>no hay nada que no puedas hacer,porque</i></p>
+                    <p class="text-center w-100 my-0"><i>estás siempre protegid@.</i></p>   
+                </article>
+                <p>
+    
+                </p>
+                <p class="text-center w-100 my-2"><i>Copyright © 1999-2020 MercadoLiebre S.R.L.</i></p>
+                </footer> 
+    </body>
+    </html>
