@@ -4,7 +4,8 @@
   "description": "¿Qué productos o servicios brindará nuestro sitio?\r Nuestro e-commerce Fuerza y disciplina brindará la posibilidad de comprar maquinas y elementos para realizar ejercicios de fuerza, todo lo que necesites para adecuar tu espacio para realizar esta actividad deportiva lo encontrarás en nuestra tienda.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js"
   },
   "keywords": [],
   "author": "",
