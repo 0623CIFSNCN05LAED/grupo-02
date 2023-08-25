@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/css/login.css'>
     <title>fuerza y disiplina </title>
 </head>
 
-<body>
+<body class="celeste-clarito">
      <header>
 
          <nave>
@@ -16,26 +17,20 @@
 
     </header>
 
-    <main>
+    <main class="product-shadow">
+      <h2 class = 'titulo'> Ingresar usuario </h2>
 
-       <section>
-            <article class="celeste-clarito">
+      <div class = "center">
 
-                    <div>
-                       <h4>● inciar secion : </h4>
-                    </div>
+      <form class = input-login>
+      <input class="usuaries-login" type="text" id="usuario" name="usuario" placeholder="Usuario" required>
+      <br>
+      <input class="usuaries-login" type="text" id="password" name="password" placeholder= "Contraseña" required>
+      <br>
+      <a href="/"> <input class = 'inicio-login' type="button" value="iniciar sesion "></a>
+      </form>
 
-                   <div>
-                   <li><a> usuario </a></li>
-                   <li><a> contraseña </a></li>
-                   </div>
-
-                   <div>
-                     <p>● registrarse: </p>
-                  </div>
-
-
-            </article>
-       </section>
+      </div>
+      </main>
 </body>
 </html>
