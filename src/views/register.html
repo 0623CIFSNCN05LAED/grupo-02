@@ -19,9 +19,9 @@
             <a href='/'><img class = 'logo' src = '/images/logo.jpeg' alt = 'Logo'></a>
             <div class = 'principal-title'> <h1> FUERZA Y DISCIPLINA </h1> </div>
             <a href='#'><div class = 'status-order'> Estado del pedido <i class="fa-solid fa-truck" style="color: #005eff;"></i> </div>  </a>
-            <a href='#'><div class = 'shopping-cart'> Carrito de compras <i class="fa-solid fa-cart-shopping" style="color: #005eff;"></i> </div></a>
-            <a href='#'><div class = 'register'> Registrate aqui <i class="fa-solid fa-right-to-bracket" style="color: #005eff;"></i> </div></a>
-            <a href='#'><div class = 'login'> Ingresa aqui <i class="fa-solid fa-user" style="color: #005eff;"></i> </div></a>
+            <a href='/productCart'><div class = 'shopping-cart'> Carrito de compras <i class="fa-solid fa-cart-shopping" style="color: #005eff;"></i> </div></a>
+            <a href='/register'><div class = 'register'> Registrate aqui <i class="fa-solid fa-right-to-bracket" style="color: #005eff;"></i> </div></a>
+            <a href='/login'><div class = 'login'> Ingresa aqui <i class="fa-solid fa-user" style="color: #005eff;"></i> </div></a>
         </div>
         <div class="image-slider ">
             <img src="/images/foto1.jpg" alt="Imagen 1">
@@ -54,6 +54,34 @@
         </nav>
         </nav>
     </header>
+        <main>
+            <h2 class='title'> Registrese aqui </h2>
+            <form>
+                <input class="name" type="text" id="nombre" name="nombre" placeholder="Nombres y apellidos" required>
+                <br>
+                <input class="user" type="text" id="usuario" name="usuario" placeholder="Nombre del usuario" required>
+                <br>
+                <input class="correo" type="text" id="email" name="correo" placeholder="E-mail" required>
+                <br>
+                <input class="password" type="text" id="password" name="contraseña" placeholder="Contraseña" required>
+                <br>
+                <input class="confirm-password" type="text" id="password" name="confirm-password"
+                    placeholder=" Confirmar contraseña" required>
+                <br>
+                <input class="direccion" type="text" id="Addres" name="direccion" placeholder="Direccion" required>
+                <br>
+                <input class="pais" type="text" id="Country" name="Pais" placeholder="Pais" required>
+                <br>
+                <input class="city" type="text" id="City" name="City" placeholder="Ciudad" required>
+                <br>
+                <h3>Carga tu foto de usuario</h3>
+                <input class='file' type="file" id="archivo" name="archivo">
+                <br>
+                <a href="/"> <input class='send' type="button" value="Enviar"></a>
+                <br>
+                <input class='erase' type="reset" value="Borrar">
+            </form>
+        </main>
     <footer>
         <section class = 'footer-content'>
             <div class = 'text-footer'> Contactanos: +57300000000</div>
