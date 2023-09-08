@@ -43,7 +43,7 @@ margin: 10px;
 
     background-color:  #effffd;
     border: 3px solid  #83949c;
-    margin: 30px;
+    margin: 50px;
 }
 
 .reseñas{
@@ -53,7 +53,25 @@ margin: 10px;
 }
 
 .descripsion{
-    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.medida-titulo{
+    padding : 10px 20px 20px 0px ;
+    margin-right: 300px;
+}
+
+.medida-precio{
+    margin-right: 300px;
+    padding-right: 150px;
+    margin-bottom: 30px;
+}
+.medida-carrito{
+    margin-right: 300px;
+    margin-bottom: 30px;
+}
+.separac-carrito{
+margin-left: 10px;
 }
 
 @media(min-width:520px){
