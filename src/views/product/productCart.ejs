@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <%- include('../partials/linksComunes.ejs') %>
+    <link rel="stylesheet" href="/css/productCart.css">
+
+    <title>Document</title>
+</head>
+<body>
+
+    <%- include('../partials/header.ejs') %>
+
+    <h2 class="carrito__titulo">CARRITO DE COMPRAS</h2>
+    
+    <form action="" class="formulario__tabla">
+    
+        <table>
+            <tr class="tabla__titulos">
+                <th>PRODUCTO</th>
+                <th class="tabla__columnaCantidad">CANTIDAD</th>
+                <th class="tabla__columnaEliminar">ELIMINAR</th>
+            </tr>
+            <tr>
+                <td>
+                    <div class="tabla__columnaProducto">
+                        <img src="/images/products/bancoPlano.jpg" alt="Banco Plano" class="tabla__imagenProducto">
+                        <div class="tabla__descripcionProducto">
+                            <p>Banco Plano </p>
+                            <p>Precio: $15000 </p>
+                            <p>Subtotal: $15000 </p>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <input type="number" class="tabla__inputCantidad">
+                </td>
+                <td>
+                    <p class="tabla__eliminar">X</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="tabla__columnaProducto">
+                        <img src="/images/products/mancuernas1kg.jpg" alt="mancuernas 1kg" class="tabla__imagenProducto">
+                        <div class="tabla__descripcionProducto">
+                            <p>Par de mancuernas de 1 kg</p>
+                            <p>Precio: $5500</p>
+                            <p>Subtotal: $5500</p>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <input type="number" class="tabla__inputCantidad">
+                </td>
+                <td>
+                    <p class="tabla__eliminar">X</p>
+                </td>
+            </tr>
+    </table>
+
+    <p class="tabla__total">TOTAL: $20500</p>
+    <button type="submit" class="tabla__buttonPagar">Ir a Pagar</button>
+    </form>
+    <%- include('../partials/footer.ejs') %>
+</body>
+</html>
