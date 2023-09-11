@@ -1,3 +1,68 @@
 * {
     font-family: 'Ubuntu', sans-serif;
 }
+
+main{
+    text-align: center;
+    background-color: #EFFFFD;
+}
+
+.title{
+    margin-top: 0;
+}
+.name{
+    margin: 10px;
+    border-radius: 8px;
+}
+
+.user{
+    margin: 10px;
+    border-radius: 8px;
+}
+
+.correo{
+    margin: 10px;
+    border-radius: 8px;
+}
+
+.password{
+    margin: 10px;
+    border-radius: 8px;
+}
+
+.confirm-password{
+    margin: 10px;
+    border-radius: 8px;
+}
+
+.direccion{
+    margin: 10px;
+    border-radius: 8px;
+}
+
+.pais{
+    margin: 10px;
+    border-radius: 8px;
+}
+
+.city{
+    margin: 10px;
+    border-radius: 8px;
+}
+
+.file{
+    margin: 10px;
+    border-radius: 8px;
+}
+
+.send{
+    margin: 10px;
+    border-radius: 8px;
+    background-color: #42C2FF;
+    width: 25%;
+}
+
+.erase{
+    margin: 10px;
+    border-radius: 8px;
+}
