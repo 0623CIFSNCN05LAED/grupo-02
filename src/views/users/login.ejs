@@ -6,15 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' href='/css/login.css'>
     <title>fuerza y disiplina </title>
+    <%- include('../partials/linksComunes.ejs') %>
 </head>
+
+
 
 <body class="celeste-clarito">
      <header>
-
-         <nave>
-         
-         <nave>
-
+        <%- include('../partials/header.ejs') %>
     </header>
 
     <main class="product-shadow">
@@ -27,10 +26,13 @@
       <br>
       <input class="usuaries-login" type="text" id="password" name="password" placeholder= "Contraseña" required>
       <br>
-      <a href="/"> <input class = 'inicio-login' type="button" value="iniciar sesion "></a>
+      <a href="/"> <input class = 'inicio-login' type="button" value="Iniciar sesión "></a>
       </form>
 
       </div>
       </main>
+      <footer>
+        <%- include('../partials/footer.ejs') %>
+        </footer>
 </body>
 </html>
