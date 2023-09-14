@@ -1,20 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <%- include('../partials/linksComunes.ejs') %>
-
-    <title>Document</title>
+    <link rel='stylesheet' href='/css/login.css'>
+    <title>fuerza y disiplina </title>
 </head>
-<body>
 
-    <%- include('../partials/header.ejs') %>
+<body class="celeste-clarito">
+     <header>
 
-    <h1>ESTA ES LA PAGINA DEL LOGIN</h1>
+         <nave>
+         
+         <nave>
 
-    <%- include('../partials/footer.ejs') %>
+    </header>
 
+    <main class="product-shadow">
+      <h2 class = 'titulo'> Ingresar usuario </h2>
+
+      <div class = "center">
+
+      <form class = input-login>
+      <input class="usuaries-login" type="text" id="usuario" name="usuario" placeholder="Usuario" required>
+      <br>
+      <input class="usuaries-login" type="text" id="password" name="password" placeholder= "Contraseña" required>
+      <br>
+      <a href="/"> <input class = 'inicio-login' type="button" value="iniciar sesion "></a>
+      </form>
+
+      </div>
+      </main>
 </body>
 </html>
