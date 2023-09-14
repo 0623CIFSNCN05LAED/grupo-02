@@ -85,7 +85,9 @@ body {
 .w-50 {
     width: 50%;
 }
-
+.marge-izq {
+    margin-left: 0.8%;
+}
 .wv-90 {
     width: 90vw;
 }
