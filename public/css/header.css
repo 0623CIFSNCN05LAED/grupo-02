@@ -1,3 +1,7 @@
+* {
+    font-family: 'Ubuntu', sans-serif;
+}
+
 .image-slider {
     width: 100%; /* Ancho del contenedor */
     height: 200px; /* Alto del contenedor */
