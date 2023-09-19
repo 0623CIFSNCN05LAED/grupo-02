@@ -1,0 +1,82 @@
+[
+    {
+      "id": 1,
+      "name": "Pesas de 5 lb",
+      "description": "Descripción de Pesas A",
+      "image": "imagen1.jpg",
+      "category": "Pesas",
+      "price": 10.5
+    },
+    {
+      "id": 2,
+      "name": "Barras de 10lb",
+      "description": "Descripción de Barras de 10 lb",
+      "image": "imagen2.jpg",
+      "category": "Barras",
+      "price": 40.0
+    },
+    {
+      "id": 3,
+      "name": "Discos de 5 lb",
+      "description": "Descripción de Discos de 5 lb",
+      "image": "imagen3.jpg",
+      "category": "Discos",
+      "price": 15.75
+    },
+    {
+      "id": 4,
+      "name": "Caminadora",
+      "description": "Descripción de Máquina de Ejercicio D",
+      "image": "imagen4.jpg",
+      "category": "Máquinas",
+      "price": 100.99
+    },
+    {
+      "id": 5,
+      "name": "Colchoneta",
+      "description": "Descripción de colchoneta",
+      "image": "imagen5.jpg",
+      "category": "Otros",
+      "price": 5.00
+    },
+    {
+      "id": 6,
+      "name": "Pesas de 10 lb",
+      "description": "Descripción de Pesas de 10 lb",
+      "image": "imagen6.jpg",
+      "category": "Pesas",
+      "price": 18.0
+    },
+    {
+      "id": 7,
+      "name": "Barras de 15 lb",
+      "description": "Descripción de Barras de 15 lb",
+      "image": "imagen7.jpg",
+      "category": "Barras",
+      "price": 45.75
+    },
+    {
+      "id": 8,
+      "name": "Discos de 10 lb",
+      "description": "Descripción de Discos de 10 lb",
+      "image": "imagen8.jpg",
+      "category": "Discos",
+      "price": 30.0
+    },
+    {
+      "id": 9,
+      "name": "Bicicleta estatica",
+      "description": "Descripción de Máquina de Ejercicio de bicicleta estatica",
+      "image": "imagen9.jpg",
+      "category": "Máquinas",
+      "price": 109.99
+    },
+    {
+      "id": 10,
+      "name": "Guantes",
+      "description": "Descripción de guantes",
+      "image": "imagen10.jpg",
+      "category": "Otros",
+      "price": 5.5
+    }
+  ]

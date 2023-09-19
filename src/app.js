@@ -22,6 +22,7 @@ app.use('/',mainRoutes);
 app.use('/product',productRoutes);
 app.use('/users',usersRoutes);
 
+
 //se levanta el servidor en el puerto 3000
 const PORT = 3000;
 app.listen(PORT,()=>console.log(`Servidor corriendo en el puerto ${PORT}`));
