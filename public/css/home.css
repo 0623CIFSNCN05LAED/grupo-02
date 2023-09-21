@@ -26,6 +26,13 @@ body {
     font-family: "Roboto", sans-serif;
 }
 
+.bg-blue-1{
+    background-color: #EFFFFD;
+}
+
+.bg-blue-2{
+    background-color: #B8FFF9;
+}
 .bg-yellow {
     background-color: #eac926;
 }
@@ -78,7 +85,9 @@ body {
 .w-50 {
     width: 50%;
 }
-
+.marge-izq {
+    margin-left: 0.8%;
+}
 .wv-90 {
     width: 90vw;
 }
