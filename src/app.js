@@ -1,6 +1,6 @@
 const express = require ('express');
 const path = require ('path');
-
+const methodOverride = require("method-override");
 const productRoutes = require ('./routes/productRoutes.js');
 const mainRoutes = require ('./routes/mainRoutes.js');
 const usersRoutes = require ('./routes/usersRoutes.js');
@@ -10,6 +10,7 @@ const app = express();
 //se define la carpeta public como carpeta de archivos publicos
 const publicPath = path.join(__dirname,'../public');
 app.use(express.static(publicPath));
+app.use(methodOverride("_method"));
 
 //se configura ejs como view engine y se indica la ubicacion de la carpeta views
 const viewsPath = path.join(__dirname,'/views');
