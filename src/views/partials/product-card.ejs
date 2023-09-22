@@ -1,12 +1,13 @@
+<link rel="stylesheet" href="/css/product-card.css" />
 <div>
-    <section>
-        <a href="/product/<%= product.id %>">
-            <figure>
-                <img src="/images/products/<%= product.image %>" alt="imagen de producto <%= product.name %>">
+    <section >
+        <a href="/product/<%= product.id %>" class = 'product-box'>
+            <figure class = 'contenedor-figura'>
+                <img src="/images/products/<%= product.image %>" alt="imagen de producto <%= product.name %>" class = 'productImagen'>
             </figure>
             <article>
-                <h2><%= product.price></h2>
-                <p><%= product.name %></p>
+                <h2><%= product.name %></h2>
+                <p><%= product.price %></p>
             </article>
         </a>
     </section>
