@@ -22,70 +22,21 @@
     <header>
         <%- include('../partials/header.ejs') %>
     </header> 
-    
-    
+            <div>
+                <div>
+                    <div class = 'producttitle'>
+                        <h2> Todos los productos </h2>
+                    </div>
+                    <div class = contenedor-p>
+                    <% products.forEach(product => { %>
+                        <%- include('../partials/product-card.ejs', {product}) %>
+                      <% }); %>
+                    </div>
+                </div>                        
+            </div>
+            
      
-    <main class="text-center bg-blue-1 p-1 wv-90 mx-auto w-100">
-        <section class="text-center p-1 flex flex-wrap gap">
-            <h2 class="title w-100">
-                Nuestros Productos
-            </h2>
-            <article class="marge-izq mb-10 bg-white md-product-shadow w-100 md-w-50 lg-w-25">
-                <img class= w-100 src="/images/barras.jpg" alt="barras">
-                <div class="bg-blue-2 bt-1 border-grey p-1 relative flex flex-wrap">
-                <p class="text-xl mr-1">Barras</p>
-                 </div>
-            </article>
-            <article class="marge-izq mb-10 bg-white md-product-shadow w-100 md-w-50 lg-w-25">
-                <img class= w-100 src="/images/discos.jpg" alt="discos">
-                <div class="bg-blue-2 bt-1 border-grey p-1 relative flex flex-wrap">
-                <p class="text-xl mr-1">Discos</p>
-                 </div>
-            </article>
-            <article class="marge-izq mb-10 bg-white md-product-shadow w-100 md-w-50 lg-w-25">
-                <img class= w-100 src="/images/mancuernas.jpg" alt="mancuernas">
-                <div class="bg-blue-2 bt-1 border-grey p-1 relative flex flex-wrap">
-                <p class="text-xl mr-1">Mancuernas</p>
-                 </div>
-            </article>
-            <article class="marge-izq mb-10 bg-white md-product-shadow w-100 md-w-50 lg-w-25">
-                <img class= w-100 src="/images/maquinas.jpg" alt="maquinas">
-                <div class="bg-blue-2 bt-1 border-grey p-1 relative flex flex-wrap">
-                <p class="text-xl mr-1">Maquinas</p>
-                 </div>
-            </article>
-
-            <section class="text-center p-1 flex flex-wrap gap">
-                <h2 class="title w-100">
-                    Noticias de Interes
-                </h2>
-                <article class="marge-izq mb-10 bg-white md-product-shadow w-100 md-w-50 lg-w-25">
-                    <img class= w-100 src="/images/blog1.jpg" alt="blog1">
-                    <div class="bg-blue-2 bt-1 border-grey p-1 relative flex flex-wrap">
-                    <p class="text-xl mr-1">Ingresa para ver mas</p>
-                     </div>
-                </article>
-                <article class="marge-izq mb-10 bg-white md-product-shadow w-100 md-w-50 lg-w-25">
-                    <img class= w-100 src="/images/blog2.jpg" alt="blog2">
-                    <div class="bg-blue-2 bt-1 border-grey p-1 relative flex flex-wrap">
-                    <p class="text-xl mr-1">Ingresa para ver mas</p>
-                     </div>
-                </article>
-                <article class="marge-izq mb-10 bg-white md-product-shadow w-100 md-w-50 lg-w-25">
-                    <img class= w-100 src="/images/blog3.jpg" alt="blog3">
-                    <div class="bg-blue-2 bt-1 border-grey p-1 relative flex flex-wrap">
-                    <p class="text-xl mr-1">Ingresa para ver mas</p>
-                     </div>
-                </article>
-                <article class="marge-izq mb-10 bg-white md-product-shadow w-100 md-w-50 lg-w-25">
-                    <img class= w-100 src="/images/blog4.jpg" alt="blog4">
-                    <div class="bg-blue-2 bt-1 border-grey p-1 relative flex flex-wrap">
-                    <p class="text-xl mr-1">Ingresa para ver mas</p>
-                     </div>
-                </article>
-                
-        </main> 
-
+    
         <footer>
             <%- include('../partials/footer.ejs') %>
         </footer>

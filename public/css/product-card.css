@@ -1,0 +1,17 @@
+.product-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.productImagen{
+    width: 80%;
+    height: 80%;
+    align-self: center;
+}
+
+.contenedor-figura{
+    display: flex;
+    justify-content: center;
+}

@@ -1,51 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/productDetail.css">
     <%- include('../partials/linksComunes.ejs') %>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Document</title>
-
+    
 </head>
    <body>
-    <header>
       <%- include('../partials/header.ejs') %>
-    </header>
     <main>
-          <div>
-        <div>
-            <div>
-                <h2>
-                    Detalle del producto: <%= product.name %>
-                </h2>
-            </div>
-        </div>
-            <div>
-                          <div>
-                              <img src="/images/products/<%= product.image %>" alt="product image" class="product-detail-img" />
-                              <p>
+            <div class = 'contenedor'>
+                          <div class = 'img'>
+                              <img src="/images/products/<%= product.image %>" alt="product image" class = 'img-c' />
+                          </div>
+                          <div class = 'description-con'>   
+                            <h2> Detalle del producto: <%= product.name %> </h2>
+                              <p class = 'description'>
                                   <%= product.description %>
                               </p>
-                          </div>
-                          <div>
-                              <article>
-                                  <h2>
-                                      <%= product.name %>
-                                  </h2>
-                                  <a href="#">COMPRAR AHORA</a>
-                                  <hr />
-                                  <a href="/product/edit/<%= product.id %>">EDITAR PRODUCTO</a>
-                                  <form action="/product/<%= product.id %>?_method=delete" method="POST"
-                                      style="display: inline-flex">
-                                      <button type="submit" class="action-button delete">
-                                          ELIMINAR
+                                  <h2> $<%= product.price %> US </h2>
+                                <a href="/"> <input type="button" value="Agregar al carrito" class = 'b-carrito'></a> 
+                                <hr/>
+                                <div class = 'botones'>
+                                  <a href="/product/edit/<%= product.id %>"> <input type="button" value="Editar el producto" class = 'botoneyd'></a>                                 
+                                  <form action="/product/<%= product.id %>?_method=delete" method="POST">
+                                      <button class = 'botoneyd' type="submit">
+                                          Eliminar
                                       </button>
                                   </form>
-                              </article>
+                                </div>
                           </div>
-            </div>
+              </div>
     </main>
     <footer>
       <%- include('../partials/footer.ejs') %>

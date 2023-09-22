@@ -2,6 +2,10 @@ const productService = require('../services/productsServices')
 
 
 const productController = {
+    index: (req,res) => {
+        const products = productService.getAllProducts();
+        res.render('main/home.ejs', {products});
+    },
     cart: function(req,res){
         res.render('product/productCart.ejs');
     },
@@ -16,7 +20,6 @@ const productController = {
     edit: (req, res) => {
         res.render('product/productUpdate.ejs')
     },
-   
 }
 
 module.exports = productController;

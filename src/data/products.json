@@ -2,7 +2,7 @@
     {
       "id": 1,
       "name": "Pesas de 5 lb",
-      "description": "Descripción de Pesas A",
+      "description": "Descripción de Pesas A  Descripción de Pesas A  Descripción de Pesas A  Descripción de Pesas A  Descripción de Pesas A  Descripción de Pesas A  Descripción de Pesas A  Descripción de Pesas A  Descripción de Pesas A  Descripción de Pesas A  Descripción de Pesas A  ",
       "image": "pesas-5-lb.jpg",
       "category": "Pesas",
       "price": 10.5
@@ -10,7 +10,7 @@
     {
       "id": 2,
       "name": "Barras de 10 lb",
-      "description": "Descripción de Barras de 10 lb",
+      "description": "Descripción de Barras de 10 lb  Descripción de Barras de 10 lb  Descripción de Barras de 10 lb  Descripción de Barras de 10 lb  Descripción de Barras de 10 lb  Descripción de Barras de 10 lb  Descripción de Barras de 10 lb  Descripción de Barras de 10 lb  Descripción de Barras de 10 lb  ",
       "image": "barras-10-lb.jpg",
       "category": "Barras",
       "price": 40.0
