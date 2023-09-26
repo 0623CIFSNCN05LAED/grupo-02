@@ -6,12 +6,15 @@
 }
 
 .productImagen{
-    width: 80%;
-    height: 80%;
+    width: 400px;
+    height: 400px;
+    max-width: 100%;
+    max-height: 100%;
     align-self: center;
 }
 
 .contenedor-figura{
     display: flex;
     justify-content: center;
+
 }
