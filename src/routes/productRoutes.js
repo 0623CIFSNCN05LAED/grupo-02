@@ -30,7 +30,7 @@ router.get("/detail/:id/", productController.detail);
 
 
 router.get("/edit/:id", productController.edit);
-router.put("/update/:id", upload.single("archivo"), productController.update);
+router.put("/detail/:id", upload.single("archivo"), productController.update);
 
 router.delete("/:id", productController.destroy);
 
