@@ -50,10 +50,10 @@
   {
     "id": 9,
     "name": "Bicicleta estatica",
-    "description": "Descripción de Máquina de Ejercicio de bicicleta estatica",
+    "description": " Descripción de Máquina de Ejercicio de bicicleta estatica ",
     "image": "bicicleta-estatica.jpg",
-    "category": "Máquinas",
-    "price": 109.99
+    "category": "Otros",
+    "price": "110.90"
   },
   {
     "id": "c797b05c-be5d-4e41-817c-9fd9931e4e54",
@@ -66,9 +66,9 @@
   {
     "id": "d8ded5fa-69c1-4d56-b65e-55af41302bf9",
     "name": "Guantes de Barra",
-    "description": "Guantes barra  Guantes barra  Guantes barra  Guantes barra  Guantes barra  Guantes barra  Guantes barra  Guantes barra  Guantes barra  ",
+    "description": "  Guantes barra  Guantes barra  Guantes barra  Guantes barra  Guantes barra  Guantes barra  Guantes barra  Guantes barra  Guantes barra    ",
     "category": "Otros",
-    "price": "59",
+    "price": "58",
     "image": "archivo-1695692963959.jpg"
   }
 ]

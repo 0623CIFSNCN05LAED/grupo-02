@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <link rel="stylesheet" href="/css/productUpdate.css">
     <%- include('../partials/linksComunes.ejs') %>
 
     <title>Fuerza y Disciplina</title>
@@ -15,30 +15,32 @@
         <main>
             <h2> Edita el producto </h2>
             <div>
-                <!-- <form action="/" method="post">
+                <form action="/product/detail/<%= product.id %>?_method=put" method="post" enctype="multipart/form-data">
                     <div>
                         <div>
                             <label class = 'label' for="name">Nombre del producto:</label>
-                            <input class = 'input' type="text" id="name" name="name" placeholder="Ej: Mancuernas de 5 libras">
+                            <input class = 'input' type="text" id="name" name="name" placeholder="Ej: Mancuernas de 5 libras"
+                                value="<%= product.name %>">
                         </div>
                         <div>
                             <label class = 'label' for="price">Precio del producto:</label>
-                            <input class = 'input' type="text" id="price" name="price" placeholder="Ej: 1000">
+                            <input class = 'input' type="text" id="price" name="price" placeholder="Ej: 1000"
+                                value="<%= product.price %>">
                         </div>
                         <div>
                             <label class = 'label' for="category">Categoría:</label>
                             <select class = 'input' name="category" id="category">
                                 <option value="">Elegí</option>
-                                <option value="Pesas">Pesas</option>
-                                <option value="Barras">Barras</option>
-                                <option value="Discos">Discos</option>
-                                <option value="Maquinas">Maquinas</option>
-                                <option value="Otros">Otros</option>
+                                <option value="Pesas" <%= product.category ? "selected" : "" %> >Pesas</option>
+                                <option value="Barras" <%= product.category ? "selected" : "" %> >Barras</option>
+                                <option value="Discos" <%= product.category ? "selected" : "" %> >Discos</option>
+                                <option value="Maquinas" <%= product.category ? "selected" : "" %> >Maquinas</option>
+                                <option value="Otros"<%= product.category ? "selected" : "" %> >Otros</option>
                             </select>
                         </div>
                         <div>
                             <label class = 'label' for="description">Descipción:</label>
-                            <textarea class = 'input' name="description" id="description"></textarea>
+                            <textarea class = 'input' name="description" id="description"> <%= product.description %> </textarea>
                         </div>
                         <h3>Carga la imagen del producto</h3>
                             <input class = 'input' type="file" id="archivo" name="archivo">
@@ -47,7 +49,7 @@
                             <button type="submit">Guardar producto</button>
                         </div>
                     </div>
-                </form> -->
+                </form>
             </div>
         </main>
     
