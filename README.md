@@ -35,6 +35,8 @@ Fabian Trigos: Tengo 39 años, vivo en Ocaña, Colombia, tengo un hijo, soy inge
 
 Cristian Villafañe: tengo 37 años, vivo en la localidad de Lanús - Provincia de Buenos Aires. Actualmente estudio Licenciatura en informática y trabajo como soporte técnico. Me gusta muchos hacer deportes en general. Hincha fanático de Boca Juniors. 
 
+Tomas Casal: tengo 20 años y vivo en Quilmes, Provincia de Buenos Aires. Trabajo en una empresa de unidades de tratamiento de aire y estuido Lic. en Informática. Me encanta el fútbol, la Fórmula 1 y el cine. Hincha del Quilmes Atlético Club.
+
 URL de los e-commerce
 
 https://mundogym.mercadoshops.com.ar/
