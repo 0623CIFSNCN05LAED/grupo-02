@@ -5,64 +5,35 @@
 main{
     text-align: center;
     background-color: #EFFFFD;
+    padding: 20px;
 }
 
 .title{
-    margin-top: 0;
-}
-.name{
-    margin: 10px;
-    border-radius: 8px;
+    margin: 0;
+    padding: 20px;
 }
 
-.user{
-    margin: 10px;
-    border-radius: 8px;
-}
-
-.correo{
-    margin: 10px;
-    border-radius: 8px;
-}
-
-.password{
-    margin: 10px;
-    border-radius: 8px;
-}
-
-.confirm-password{
-    margin: 10px;
-    border-radius: 8px;
-}
-
-.direccion{
-    margin: 10px;
-    border-radius: 8px;
-}
-
-.pais{
-    margin: 10px;
-    border-radius: 8px;
-}
-
-.city{
-    margin: 10px;
-    border-radius: 8px;
-}
-
-.file{
-    margin: 10px;
-    border-radius: 8px;
+form input{
+    margin: 13px;
+    border-radius: 5px;
+    text-align: center;
 }
 
 .send{
-    margin: 10px;
-    border-radius: 8px;
+    margin: 20px;
+    border-radius: 5px;
     background-color: #42C2FF;
-    width: 25%;
+    width: 15%;
 }
 
 .erase{
     margin: 10px;
-    border-radius: 8px;
+    border-radius: 5px;
+}
+
+
+@media (max-width:762px) {
+    .send {
+        width: max-content;
+    }
 }

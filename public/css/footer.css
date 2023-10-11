@@ -23,38 +23,39 @@
 width: 30%;
 text-align: center;
 margin: 10px;
-font-size: 13px;
+font-size: 16px;
 }
 
 .text-footer1{
     width: 30%;
     text-align: center;
     margin: 10px;
-    font-size: 13px;
+    font-size: 16px;
 }
 
 .text-footer2{
     text-align: center;
     width: 30%;
     margin: 10px;
-    font-size: 13px;
+    font-size: 16px;
 }
 
 
 @media (max-width: 767px){
     .footer-content{
-        font-size: 8px;
+        font-size: 10px;
     }
     .text-footer{
-        font-size: 5px;
-        
-        }
-        
-        .text-footer1{
-            font-size: 5px;
-        }
-        
-        .text-footer2{
-            font-size: 5px;
-        }
+        font-size: 8px; 
+    }
+    .text-footer1{
+        font-size: 8px;
+        overflow-wrap: break-word;
+    }
+    .text-footer2{
+        font-size: 8px;
+    }
+    .logo-footer{
+        width: 20%;
+    }
 }
