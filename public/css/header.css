@@ -1,3 +1,7 @@
+* {
+    font-family: 'Ubuntu', sans-serif;
+}
+
 .image-slider {
     width: 100%; /* Ancho del contenedor */
     height: 200px; /* Alto del contenedor */
@@ -39,7 +43,9 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: #EFFFFD;
+    background-color: #42C2FF;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 

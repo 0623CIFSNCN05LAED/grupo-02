@@ -1,37 +1,34 @@
 const express = require ('express');
 const path = require ('path');
+const methodOverride = require("method-override");
+const productRoutes = require ('./routes/productRoutes.js');
+const mainRoutes = require ('./routes/mainRoutes.js');
+const usersRoutes = require ('./routes/usersRoutes.js');
+
 
 const app = express();
+
+
 
 //se define la carpeta public como carpeta de archivos publicos
 const publicPath = path.join(__dirname,'../public');
 app.use(express.static(publicPath));
+app.use(methodOverride("_method"));
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+//se configura ejs como view engine y se indica la ubicacion de la carpeta views
+const viewsPath = path.join(__dirname,'/views');
+app.set('view engine','ejs');
+app.set('views',viewsPath);
 
 //se definen las rutas a cada uno de los recursos de la aplicacion
-app.get('/',function(req,res){
-    const homePath = path.join(__dirname,'/views/home.html');
-    res.sendFile(homePath);
-});
 
-app.get('/login',function(req,res){
-    const loginPath = path.join(__dirname,'/views/login.html');
-    res.sendFile(loginPath);
-});
+app.use('/',mainRoutes);
+app.use('/product',productRoutes);
+app.use('/users',usersRoutes);
 
-app.get('/register',function(req,res){
-    const registerPath = path.join(__dirname,'/views/register.html');
-    res.sendFile(registerPath);
-});
-
-app.get('/productDetail',function(req,res){
-    const productDetailPath = path.join(__dirname,'/views/productDetail.html');
-    res.sendFile(productDetailPath);
-});
-
-app.get('/productCart',function(req,res){
-    const productCartPath = path.join(__dirname,'/views/productCart.html');
-    res.sendFile(productCartPath);
-});
 
 //se levanta el servidor en el puerto 3000
-app.listen(3000,()=>console.log('Servidor corriendo en el puerto 3000'));
+const PORT = 3000;
+app.listen(PORT,()=>console.log(`Servidor corriendo en el puerto ${PORT}`));

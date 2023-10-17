@@ -50,3 +50,4 @@ https://equiposdegimnasia.com/
 https://fitnesstotal.com.co/
 
 
+link al tablero de trello: https://trello.com/w/grupo2fuerzaydisciplina

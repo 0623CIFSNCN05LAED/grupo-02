@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "Pesas de 5 lb",
+    "description": "Descripción de Pesas A  Descripción de Pesas A  Descripción de Pesas A  Descripción de Pesas A  Descripción de Pesas A  Descripción de Pesas A  Descripción de Pesas A  Descripción de Pesas A  Descripción de Pesas A  Descripción de Pesas A  Descripción de Pesas A  ",
+    "image": "pesas-5-lb.jpg",
+    "category": "Pesas",
+    "price": 10.5
+  },
+  {
+    "id": 2,
+    "name": "Barras de 10 lb",
+    "description": "Descripción de Barras de 10 lb  Descripción de Barras de 10 lb  Descripción de Barras de 10 lb  Descripción de Barras de 10 lb  Descripción de Barras de 10 lb  Descripción de Barras de 10 lb  Descripción de Barras de 10 lb  Descripción de Barras de 10 lb  Descripción de Barras de 10 lb  ",
+    "image": "barras-10-lb.jpg",
+    "category": "Barras",
+    "price": 40
+  },
+  {
+    "id": 3,
+    "name": "Discos de 5 lb",
+    "description": "Descripción de Discos de 5 lb",
+    "image": "discos-5-lb.jpg",
+    "category": "Discos",
+    "price": 15.75
+  },
+  {
+    "id": 4,
+    "name": "Caminadora",
+    "description": "Descripción de Máquina de Ejercicio D",
+    "image": "caminadora.jpg",
+    "category": "Máquinas",
+    "price": 100.99
+  },
+  {
+    "id": 6,
+    "name": "Pesas de 10 lb",
+    "description": "Descripción de Pesas de 10 lb",
+    "image": "pesas-10-lb.jpg",
+    "category": "Pesas",
+    "price": 18
+  },
+  {
+    "id": 7,
+    "name": "Barras de 15 lb",
+    "description": "Descripción de Barras de 15 lb",
+    "image": "barras-15-lb.jpg",
+    "category": "Barras",
+    "price": 45.75
+  },
+  {
+    "id": 9,
+    "name": "Bicicleta estatica",
+    "description": " Descripción de Máquina de Ejercicio de bicicleta estatica ",
+    "image": "bicicleta-estatica.jpg",
+    "category": "Otros",
+    "price": "110.90"
+  },
+  {
+    "id": "c797b05c-be5d-4e41-817c-9fd9931e4e54",
+    "name": "BARRA DE 10 KG",
+    "description": "Descripción de barra de 10 KG  Descripción de barra de 10 KGDescripción de barra de 10 KGDescripción de barra de 10 KG",
+    "category": "Discos",
+    "price": "1000",
+    "image": "archivo-1695691621842.jpg"
+  },
+  {
+    "id": "d8ded5fa-69c1-4d56-b65e-55af41302bf9",
+    "name": "Guantes de Barra",
+    "description": "  Guantes barra  Guantes barra  Guantes barra  Guantes barra  Guantes barra  Guantes barra  Guantes barra  Guantes barra  Guantes barra    ",
+    "category": "Otros",
+    "price": "58",
+    "image": "archivo-1695692963959.jpg"
+  }
+]
