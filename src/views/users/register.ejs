@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <%- include('../partials/linksComunes.ejs') %>
+
+    <title>Fuerza y Disciplina</title>
+  </head>
+
+  <body>
+    <%- include('../partials/header.ejs') %>
+
+    <main>
+      <h2 class="title">Registrese aqui</h2>
+      <form action="/users/register" method="post" enctype="multipart/form-data">
+        <input
+          class="name"
+          type="text"
+          id="nombre"
+          name="nombre"
+          placeholder="Nombres y apellidos"
+          required
+        />
+        <br />
+        <input
+          class="user"
+          type="text"
+          id="usuario"
+          name="usuario"
+          placeholder="Nombre del usuario"
+          required
+        />
+        <br />
+        <input
+          class="correo"
+          type="text"
+          id="email"
+          name="correo"
+          placeholder="E-mail"
+          required
+        />
+        <br />
+        <input
+          class="password"
+          type="text"
+          id="password"
+          name="contraseña"
+          placeholder="Contraseña"
+          required
+        />
+        <br />
+        <input
+          class="confirm-password"
+          type="text"
+          id="password"
+          name="confirm-password"
+          placeholder=" Confirmar contraseña"
+          required
+        />
+        <br />
+        <input
+          class="direccion"
+          type="text"
+          id="Addres"
+          name="direccion"
+          placeholder="Direccion"
+          required
+        />
+        <br />
+        <input
+          class="pais"
+          type="text"
+          id="Country"
+          name="pais"
+          placeholder="Pais"
+          required
+        />
+        <br />
+        <input
+          class="city"
+          type="text"
+          id="City"
+          name="city"
+          placeholder="Ciudad"
+          required
+        />
+        <br />
+        <h3>Carga tu foto de usuario</h3>
+        <input class="file" type="file" id="archivo" name="archivo" />
+        <br />
+        <div><button class="send" type="submit">Enviar</button></div>
+        <br />
+        <input class="erase" type="reset" value="Borrar" />
+      </form>
+    </main>
+
+    <%- include('../partials/footer.ejs') %>
+  </body>
+</html>
