@@ -5,6 +5,20 @@ const usersController = {
         res.render('users/login.ejs');
     },
 
+    loginData: function(req,res){
+        const userData = {
+            user: req.body.usuario,
+            password:req.body.password
+        }
+
+        const userFound = userService.findUser(userData.user)
+            if (userFound && userFound.password == userData.password){
+              res.redirect("/home");
+            }else{
+                res.redirect("/users/login")
+            }
+    },
+
     register: function(req,res){
         res.render('users/register.ejs');
     },
