@@ -6,7 +6,7 @@ const multer = require("multer");
 
 const validations = require("../validations/validation_login");
 const validateForm = require("../middlewares/validate-from");
-const userGuard = require("../middlewares/user-guard");
+//const userGuard = require("../middlewares/user-guard");
 
 const storage = multer.diskStorage({
     destination: path.join(__dirname, "../../public/images/users"),
@@ -24,7 +24,7 @@ const upload = multer({
  
 const usersController = require ('../controllers/usersController');
 
-router.get ('/login',userGuard,usersController.login);
+router.get ('/login',usersController.login);
 router.post("/login",urlencoded({
     extended: false,
 }),validations,validateForm,usersController.loginData)
