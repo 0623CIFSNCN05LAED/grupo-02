@@ -1,15 +1,17 @@
 const fs = require("fs");
 const path = require("path");
 const { v4: uuidv4 } = require("uuid");
+const bcrypt = require('bcrypt');
 
 const userdb = {
     create: (user) => {
-        console.log(`Creating product ${user.name}`);
+        console.log(`Creating user ${user.name}`);
         const usersFilePath = path.join(
           __dirname,
           "../data/users.json"
         );
         const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
+
         const newUser = {
           id: uuidv4(),
           ...user,
@@ -18,7 +20,7 @@ const userdb = {
         fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2));
       },
     findByUser:(user)=>{
-      console.log(`Creating product ${user.name}`);
+      console.log(`Ingreso ${user}`);
       const usersFilePath = path.join(
         __dirname,
         "../data/users.json"
