@@ -20,15 +20,15 @@ const userdb = {
         fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2));
       },
     findByUser:(user)=>{
-      console.log(`Ingreso ${user}`);
       const usersFilePath = path.join(
         __dirname,
         "../data/users.json"
-      );
+      )
       const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
-      const userName = users.find( (p) => p == p.user)
+      const userName = users.find((p) => user == p.user);
       return userName;
     }
+    
 }
 
 module.exports = userdb;

@@ -5,7 +5,7 @@ const userServices = {
         db.create(user);
       },
     findUser:(user)=>{
-        db.findByUser(user);
+        return db.findByUser(user);
     }
   };
 

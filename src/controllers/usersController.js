@@ -10,10 +10,8 @@ const usersController = {
             user: req.body.usuario,
             password:req.body.contra
         }
-        console.log(userData)
-        console.log(req.body);
-
-        const userFound = userService.findUser(userData.user)
+        const usuarioData = userData.user;
+        const userFound = userService.findUser(usuarioData);
             if (userFound && userFound.password == userData.password){
               res.redirect("/");
             }else{
