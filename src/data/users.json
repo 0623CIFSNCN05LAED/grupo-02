@@ -20,5 +20,16 @@
     "country": "Colombia",
     "city": "Barranquilla",
     "image": "archivo-1698278316742.png"
+  },
+  {
+    "id": "469e82c8-21c8-47a1-b9a3-e35d8fba576b",
+    "name": "Alfredo",
+    "user": "Kristell",
+    "email": "prueba@prueba.com",
+    "password": "$2b$10$mGPVj0Kvfm.YR8jULd6yQus4Ev8sEVwtJN418PGfy5O01./O1tdw6",
+    "adress": "Cra 41 # 63 - 09 Apto 2C",
+    "country": "Colombia",
+    "city": "Barranquilla",
+    "image": "archivo-1698521449263.png"
   }
 ]
