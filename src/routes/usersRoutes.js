@@ -27,7 +27,7 @@ const usersController = require ('../controllers/usersController');
 router.get ('/login',usersController.login);
 router.post("/login",urlencoded({
     extended: false,
-}),validations, usersController.loginData, validateForm,userGuard)
+}),validations, usersController.loginData, userGuard, validateForm)
 
 router.get('/register',usersController.register);
 router.post('/register', upload.single("archivo"), usersController.store, (req, res) => {

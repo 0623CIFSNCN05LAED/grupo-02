@@ -11,14 +11,21 @@ const userdb = {
           "../data/users.json"
         );
         const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
-
-        const newUser = {
-          id: uuidv4(),
-          ...user,
-        };
+        const saltRounds = 10;
+        bcrypt.hash(user.password, saltRounds, (err, hash) => {
+          if (err) {
+          } else {
+            const newUser = {
+              id: uuidv4(),
+              ...user,
+              password: hash, // Almacena el hash de la contraseña en lugar de la contraseña en texto plano
+            };
+  
         users.push(newUser);
         fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2));
-      },
+      }
+    })
+    },
     findByUser:(user)=>{
       const usersFilePath = path.join(
         __dirname,

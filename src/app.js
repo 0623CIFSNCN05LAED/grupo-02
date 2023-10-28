@@ -9,7 +9,14 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
-
+app.use(
+  session({
+    secret: 'mi-secreto',
+    resave: false,
+    saveUninitialized: true,
+    cookie: { maxAge: 3600000 },
+  })
+);
 
 //se define la carpeta public como carpeta de archivos publicos
 const publicPath = path.join(__dirname, "../public");
@@ -31,9 +38,11 @@ app.use("/product", productRoutes);
 app.use("/users", usersRoutes);
 
 
-app.use(
-    session({ secret: "secret", resave: false, saveUninitialized: false })
-  );
+// app.use(
+//     session({ secret: "secret", resave: false, saveUninitialized: false })
+//   );
+
+
 
 //se levanta el servidor en el puerto 3000
 const PORT = 3000;

@@ -1,8 +1,12 @@
 const userService = require('../services/userServices')
+const bcrypt = require('bcrypt');
+const userData = require("../middlewares/user-guard")
+
 
 const usersController = {
     login: function(req,res){
-        res.render('users/login.ejs');
+        console.log(req.session.userData);
+        res.render('users/login.ejs', { userData: req.session.userData });
     },
 
     loginData: function(req,res){
@@ -12,15 +16,25 @@ const usersController = {
         }
         const usuarioData = userData.user;
         const userFound = userService.findUser(usuarioData);
-            if (userFound && userFound.password == userData.password){
-              res.redirect("/");
+            if(userFound){
+                bcrypt.compare(userData.password, userFound.password, (err, result) => {
+                    if (err) {
+                    } else {
+                      if (result) {
+                        res.redirect('/')
+                      } else {
+                        res.redirect("/users/login")
+                      }
+                    }
+                  });
             }else{
                 res.redirect("/users/login")
             }
     },
 
     register: function(req,res){
-        res.render('users/register.ejs');
+        
+        res.render('users/register.ejs', { userData: req.session.userData } );
     },
     store: function(req, res){
         console.log(req.body.contra)
