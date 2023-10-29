@@ -18,7 +18,7 @@ const userdb = {
             const newUser = {
               id: uuidv4(),
               ...user,
-              password: hash, // Almacena el hash de la contraseña en lugar de la contraseña en texto plano
+              password: hash, 
             };
   
         users.push(newUser);

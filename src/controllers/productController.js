@@ -3,7 +3,6 @@ const userData = require("../middlewares/user-guard")
 
 const productController = {
     index: (req,res) => {
-        console.log(req.session.userData);
         const products = productService.getAllProducts();
         res.render('main/home.ejs', {products, userData: req.session.userData });
     },
