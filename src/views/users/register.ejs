@@ -15,6 +15,25 @@
     <main>
       <h2 class="title">Registrese aqui</h2>
       <form action="/users/register" method="post" enctype="multipart/form-data">
+
+        <br />
+        <label for="role">Selecciona tu rol:</label>
+  
+        <input 
+          type="radio" 
+          id="vendedor" 
+          name="role" 
+          value="vendedor">
+        <label for="vendedor">vendedor</label>
+
+        <input
+          type="radio"
+          id="comprador"
+          name="role" 
+          value="comprador">
+        <label for="comprador">comprador</label>
+        <br />
+
         <input
           class="name"
           type="text"

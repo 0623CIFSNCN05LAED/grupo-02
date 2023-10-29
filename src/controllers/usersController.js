@@ -40,6 +40,7 @@ const usersController = {
         console.log(req.body.contra)
         console.log(req.body.city)
         const user = {
+            role: req.body.role,
             name: req.body.nombre,
             user: req.body.usuario,
             email: req.body.correo,
