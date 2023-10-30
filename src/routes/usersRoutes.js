@@ -35,4 +35,15 @@ router.post('/register', upload.single("archivo"), usersController.store, (req, 
 })
 
 
+router.get('/logout', (req, res) => {
+  req.session.destroy((err) => {
+      if (err) {
+          console.error(err);
+      } else {
+          res.redirect('/users/login');
+      }
+  });
+});
+
+
 module.exports = router; 
