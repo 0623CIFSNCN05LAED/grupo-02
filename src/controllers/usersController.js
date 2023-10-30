@@ -13,9 +13,7 @@ const usersController = {
             user: req.body.usuario,
             password:req.body.contra
         }
-        const data = req.body;
-        req.session.userData = data;
-        console.log(data)
+       
         const usuarioData = userData.user;
         const userFound = userService.findUser(usuarioData);
             if(userFound){
@@ -23,6 +21,9 @@ const usersController = {
                     if (err) {
                     } else {
                       if (result) {
+                        const data = req.body;
+                        req.session.userData = data;
+                        console.log(data)
                         res.redirect('/')
                       } else {
                         res.redirect("/users/login")
@@ -53,6 +54,7 @@ const usersController = {
         
         userService.createUser(user);
         res.redirect('/');
-    }
+    },
+    
 }
 module.exports = usersController;
