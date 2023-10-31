@@ -4,6 +4,7 @@ const {urlencoded } = require("express");
 const path = require("path");
 const multer = require("multer");
 
+const authenticated = require('../middlewares/authenticated')
 const validations = require("../validations/validation_login");
 const validateForm = require("../middlewares/validate-form");
 const userGuard = require("../middlewares/user-guard");
@@ -27,7 +28,8 @@ const usersController = require ('../controllers/usersController');
 router.get ('/login',usersController.login);
 router.post("/login",urlencoded({
     extended: false,
-}),validations, usersController.loginData, userGuard, validateForm)
+}),validations, usersController.loginData, userGuard, validateForm);
+router.get('/logout', usersController.logout)
 
 router.get('/register',usersController.register);
 router.post('/register', upload.single("archivo"), usersController.store, (req, res) => {
@@ -35,15 +37,7 @@ router.post('/register', upload.single("archivo"), usersController.store, (req, 
 })
 
 
-router.get('/logout', (req, res) => {
-  req.session.destroy((err) => {
-      if (err) {
-          console.error(err);
-      } else {
-          res.redirect('/users/login');
-      }
-  });
-});
+
 
 
 module.exports = router; 

@@ -34,6 +34,15 @@ const usersController = {
                 res.redirect("/users/login")
             }
     },
+    logout: function(req, res){
+        req.session.destroy((err) => {
+            if (err) {
+                console.error(err);
+            } else {
+                res.redirect('/users/login');
+            }
+        });
+    },
 
     register: function(req,res){
         

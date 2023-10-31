@@ -42,5 +42,29 @@
     "country": "Colombia",
     "city": "Barranquilla",
     "image": "archivo-1698621366537.png"
+  },
+  {
+    "id": "f03052ef-2827-468b-a464-247fd1736d9a",
+    "role": "comprador",
+    "name": "Agustin",
+    "user": "agustin",
+    "email": "prueba@prueba.com",
+    "password": "$2b$10$3AHmd4Hy14MLvw0wyEgzm.jhTnkq8auAMC9WIowf5t8n0K1DTCPUa",
+    "adress": "2",
+    "country": "Argentina",
+    "city": "Buenos Aires",
+    "image": "archivo-1698711618558.png"
+  },
+  {
+    "id": "f73a5fa0-a353-4818-9800-b023779add0f",
+    "role": "vendedor",
+    "name": "alfredo",
+    "user": "alfredo",
+    "email": "prueba@prueba.com",
+    "password": "$2b$10$5kpc.fIqZPXd4AjloSI.UuVWParah8EVSPc8Q2Orvct7W8gJrze7a",
+    "adress": "Cra 41 # 63 - 09 Apto 2C",
+    "country": "Colombia",
+    "city": "Barranquilla",
+    "image": "archivo-1698712744069.png"
   }
 ]
