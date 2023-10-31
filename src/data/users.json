@@ -1,82 +1,70 @@
 [
-    {
-      "id": 1,
-      "firstName": "John",
-      "lastName": "Doe",
-      "email": "john@example.com",
-      "password": "password123",
-      "image": "john.jpg"
-    },
-    {
-      "id": 2,
-      "firstName": "Jane",
-      "lastName": "Smith",
-      "email": "jane@example.com",
-      "password": "password456",
-      "image": "jane.jpg"
-    },
-    {
-      "id": 3,
-      "firstName": "Alice",
-      "lastName": "Johnson",
-      "email": "alice@example.com",
-      "password": "password789",
-      "image": "alice.jpg"
-    },
-    {
-      "id": 4,
-      "firstName": "Bob",
-      "lastName": "Brown",
-      "email": "bob@example.com",
-      "password": "passwordabc",
-      "image": "bob.jpg"
-    },
-    {
-      "id": 5,
-      "firstName": "Eva",
-      "lastName": "Davis",
-      "email": "eva@example.com",
-      "password": "passwordefg",
-      "image": "eva.jpg"
-    },
-    {
-      "id": 6,
-      "firstName": "Michael",
-      "lastName": "Johnson",
-      "email": "michael@example.com",
-      "password": "password123",
-      "image": "michael.jpg"
-    },
-    {
-      "id": 7,
-      "firstName": "Sophia",
-      "lastName": "Lee",
-      "email": "sophia@example.com",
-      "password": "password456",
-      "image": "sophia.jpg"
-    },
-    {
-      "id": 8,
-      "firstName": "Liam",
-      "lastName": "Smith",
-      "email": "liam@example.com",
-      "password": "password789",
-      "image": "liam.jpg"
-    },
-    {
-      "id": 9,
-      "firstName": "Olivia",
-      "lastName": "Martin",
-      "email": "olivia@example.com",
-      "password": "passwordabc",
-      "image": "olivia.jpg"
-    },
-    {
-      "id": 10,
-      "firstName": "Noah",
-      "lastName": "Anderson",
-      "email": "noah@example.com",
-      "password": "passwordefg",
-      "image": "noah.jpg"
-    }
-  ]
+  {
+    "id": 1,
+    "name": "Noah Anderson",
+    "user": "afdasfasf",
+    "email": "adsfgdsagf",
+    "password": "noah@example.com",
+    "adress": "AFasdf",
+    "country": "sadfsdaf",
+    "city": "dsgfdsg",
+    "image": "noah.jpg"
+  },
+  {
+    "id": "e36812ad-9a81-4fbb-af13-7bcec30b81a1",
+    "name": "Alfredo",
+    "user": "Alfredo",
+    "email": "prueba@prueba.com",
+    "password": "1",
+    "adress": "Cra 41 # 63 - 09 Apto 2C",
+    "country": "Colombia",
+    "city": "Barranquilla",
+    "image": "archivo-1698278316742.png"
+  },
+  {
+    "id": "469e82c8-21c8-47a1-b9a3-e35d8fba576b",
+    "name": "Alfredo",
+    "user": "Kristell",
+    "email": "prueba@prueba.com",
+    "password": "$2b$10$mGPVj0Kvfm.YR8jULd6yQus4Ev8sEVwtJN418PGfy5O01./O1tdw6",
+    "adress": "Cra 41 # 63 - 09 Apto 2C",
+    "country": "Colombia",
+    "city": "Barranquilla",
+    "image": "archivo-1698521449263.png"
+  },
+  {
+    "id": "93c2c70f-42bc-47f7-bc12-2feae3712942",
+    "name": "Alfredo",
+    "user": "Alfredo",
+    "email": "prueba@prueba.com",
+    "password": "$2b$10$wF5acWdSDe1F.sUMWpMKKeqkj8LuXEUjlfhBZ/mZVCjOrAlYfuvCW",
+    "adress": "Cra 41 # 63 - 09 Apto 2C",
+    "country": "Colombia",
+    "city": "Barranquilla",
+    "image": "archivo-1698621366537.png"
+  },
+  {
+    "id": "f03052ef-2827-468b-a464-247fd1736d9a",
+    "role": "comprador",
+    "name": "Agustin",
+    "user": "agustin",
+    "email": "prueba@prueba.com",
+    "password": "$2b$10$3AHmd4Hy14MLvw0wyEgzm.jhTnkq8auAMC9WIowf5t8n0K1DTCPUa",
+    "adress": "2",
+    "country": "Argentina",
+    "city": "Buenos Aires",
+    "image": "archivo-1698711618558.png"
+  },
+  {
+    "id": "f73a5fa0-a353-4818-9800-b023779add0f",
+    "role": "vendedor",
+    "name": "alfredo",
+    "user": "alfredo",
+    "email": "prueba@prueba.com",
+    "password": "$2b$10$5kpc.fIqZPXd4AjloSI.UuVWParah8EVSPc8Q2Orvct7W8gJrze7a",
+    "adress": "Cra 41 # 63 - 09 Apto 2C",
+    "country": "Colombia",
+    "city": "Barranquilla",
+    "image": "archivo-1698712744069.png"
+  }
+]

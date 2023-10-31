@@ -1,21 +1,21 @@
 const productService = require('../services/productsServices')
-
+const userData = require("../middlewares/user-guard")
 
 const productController = {
     index: (req,res) => {
         const products = productService.getAllProducts();
-        res.render('main/home.ejs', {products});
+        res.render('main/home.ejs', {products, userData: req.session.userData });
     },
     cart: function(req,res){
-        res.render('product/productCart.ejs');
+        res.render('product/productCart.ejs', { userData: req.session.userData });
     },
     detail: function(req,res){
         const id = req.params.id;
     const product = productService.getProduct(id);
-        res.render('product/productDetail.ejs', {product});
+        res.render('product/productDetail.ejs', {product,userData: req.session.userData });
     },
     create: (req, res) => {
-        res.render('product/productCreate.ejs')
+        res.render('product/productCreate.ejs', { userData: req.session.userData })
     },
     store: (req, res) => {
         const product = {
@@ -31,7 +31,7 @@ const productController = {
     edit: (req, res) => {
         const id = req.params.id;
         const product = productService.getProduct(id);
-        res.render('product/productUpdate.ejs', {product})
+        res.render('product/productUpdate.ejs', {product, userData: req.session.userData })
     },
     update: (req, res) => {
         const product = req.body;

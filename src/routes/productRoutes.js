@@ -2,7 +2,7 @@ const express = require ('express');
 const router = express.Router();
 const path = require("path");
 const multer = require("multer");
-
+const authenticated = require('../middlewares/authenticated')
 
 const storage = multer.diskStorage({
     destination: path.join(__dirname, "../../public/images/products"),
@@ -21,17 +21,17 @@ const storage = multer.diskStorage({
 
 const productController = require ('../controllers/productController.js');
 
-router.get('/cart', productController.cart);
+router.get('/cart', authenticated , productController.cart);
 
-router.get('/create',productController.create);
+router.get('/create', authenticated ,productController.create);
 router.post("/home", upload.single("archivo"), productController.store);
 
 router.get("/detail/:id/", productController.detail);
 
 
-router.get("/edit/:id", productController.edit);
+router.get("/edit/:id", authenticated , productController.edit);
 router.put("/detail/:id", upload.single("archivo"), productController.update);
 
-router.delete("/:id", productController.destroy);
+router.delete("/:id", authenticated, productController.destroy);
 
 module.exports = router;
