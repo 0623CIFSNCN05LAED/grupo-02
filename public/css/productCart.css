@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+main{
+    background-color: #EFFFFD;
+}
+
 .formulario__tabla{
     max-width: 1200px;
     margin: auto;
@@ -9,8 +13,6 @@
 
 .carrito__titulo{
     text-align: center;
-    font-size: 30px;
-    color: #42C2FF;
 }
 
 .tabla__columnaProducto{

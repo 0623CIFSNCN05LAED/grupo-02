@@ -1,3 +1,7 @@
+main {
+    padding: 20px;
+}
+
 .celeste-clarito{
     background-color: #effffd;
 }
@@ -7,25 +11,29 @@
     justify-content: center;
 }
 
-.usuaries-login{
-    margin: 10px;
+.users-login{
+    margin: 15px;
     border-radius: 5px;
     text-align: center;
-    width: 50%;
+    width: 18%;
+
 }
 
 .inicio-login{
     color: white;
     background-color: #42c2ff;
     border-radius: 5px;
-    width: 80%;
-    margin: 10px;
+    width: max-content;
+    margin: 20px;
     text-align: center ;
     transition: background-color 0.3s
 }
 .center{
     text-align: center;
 }
-.product-shadow{
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+
+@media (max-width:768px){
+    .users-login{
+        width: 35%;
+    }
 }

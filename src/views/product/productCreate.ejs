@@ -10,25 +10,42 @@
   </head>
   <body>
     <%- include('../partials/header.ejs') %>
-
-    <main>
-      <h2 class="titleedit">Crear el producto</h2>
-      <div class="form">
-        <form
-          action="/product/home"
-          method="post"
-          enctype="multipart/form-data"
-        >
-          <div>
-            <div>
-              <label class="label" for="name">Nombre del producto:</label>
-              <input
-                class="input"
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Ej: Mancuernas de 5 libras"
-              />
+         <main>
+            <h2 class='titleedit'> Crear el producto </h2>
+            <div class = 'form'>
+                <form action="/product/home" method="post" enctype="multipart/form-data" >
+                    <div>
+                        <div>
+                            <label class = 'label' for="name">Nombre del producto:</label>
+                            <input class = 'input' type="text" id="name" name="name" placeholder="Ej: Mancuernas de 5 libras">
+                        </div>
+                        <div>
+                            <label class = 'label' for="price">Precio del producto:</label>
+                            <input class = 'input' type="text" id="price" name="price" placeholder="Ej: 1000">
+                        </div>
+                        <div>
+                            <label class = 'label' for="category">Categoría:</label>
+                            <select class = 'input' name="category" id="category">
+                                <option value="">Elegí</option>
+                                <option value="Pesas">Pesas</option>
+                                <option value="Barras">Barras</option>
+                                <option value="Discos">Discos</option>
+                                <option value="Maquinas">Maquinas</option>
+                                <option value="Otros">Otros</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class = 'label' for="description">Descripción:</label>
+                            <textarea class = 'input' name="description" id="description"></textarea>
+                        </div>
+                        <h3>Carga la imagen del producto</h3>
+                            <input class = 'input' type="file" id="archivo" name="archivo">
+                            <br>
+                        <div class = 'last-div'>
+                            <button type="submit">Guardar producto</button>
+                        </div>
+                    </div>
+                </form>
             </div>
             <div>
               <label class="label" for="price">Precio del producto:</label>

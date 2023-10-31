@@ -1,7 +1,6 @@
 /*normalize*/
 *{
-    padding: o;
-    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -24,6 +23,10 @@ ul {
 
 body {
     font-family: "Roboto", sans-serif;
+}
+
+main {
+    margin: 0;
 }
 
 .bg-blue-1{
@@ -232,8 +235,8 @@ body {
 .contenedor-p{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
     width: auto;
-    justify-content: center;
     text-align: center;
 }
 

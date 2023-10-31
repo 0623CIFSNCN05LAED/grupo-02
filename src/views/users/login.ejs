@@ -11,28 +11,28 @@
 
 
 
-<body class="celeste-clarito">
+<body>
      <header>
         <%- include('../partials/header.ejs') %>
     </header>
 
-    <main class="product-shadow">
+    <main class="celeste-clarito">
       <h2 class = 'titulo'> Ingresar usuario </h2>
 
       <div class = "center">
 
-      <form action="/users/login" method="post" class = input-login>
-      <input class="usuaries-login" type="text" id="usuario" name="usuario" placeholder="Usuario" required>
+      <form action="/users/login" method="post" class = "input-login product-shadow" >
+      <input class="users-login" type="text" id="usuario" name="usuario" placeholder="Usuario" required>
       <br>
       <input class="usuaries-login" type="text" id="email" name="email" placeholder="Email" required>
       <br>
-      <input class="usuaries-login" type="text" id="password" name="contra" placeholder= "Contraseña" required>
+      <input class="users-login" type="text" id="password" name="contra" placeholder= "Contraseña" required>
       <br>
       <div> <button class = 'inicio-login' type="submit">Iniciar sesión</button> </div>
       </form>
      
       </div>
-      </main>
+    </main>
       <footer>
         <%- include('../partials/footer.ejs') %>
         </footer>
