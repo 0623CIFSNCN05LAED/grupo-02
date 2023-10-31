@@ -18,20 +18,12 @@
 
         <br />
         <label for="role">Selecciona tu rol:</label>
-  
-        <input 
-          type="radio" 
-          id="vendedor" 
-          name="role" 
-          value="vendedor">
-        <label for="vendedor">vendedor</label>
-
-        <input
-          type="radio"
-          id="comprador"
-          name="role" 
-          value="comprador">
-        <label for="comprador">comprador</label>
+        <select class="name" name="role" id="category">
+          <option value="">Elegí</option>
+          <option value="Vendedor">Vendedor</option>
+          <option value="Comprador">Comprador</option>
+          <option value="Vendedor/Comprador">Vendedor/Comprador</option>
+        </select>
         <br />
 
         <input

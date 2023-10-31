@@ -24,14 +24,6 @@
     "price": 100.99
   },
   {
-    "id": 6,
-    "name": "Pesas de 10 lb",
-    "description": "Descripción de Pesas de 10 lb",
-    "image": "pesas-10-lb.jpg",
-    "category": "Pesas",
-    "price": 18
-  },
-  {
     "id": 9,
     "name": "Bicicleta estatica",
     "description": " Descripción de Máquina de Ejercicio de bicicleta estatica ",
@@ -54,5 +46,13 @@
     "category": "Otros",
     "price": "58",
     "image": "archivo-1695692963959.jpg"
+  },
+  {
+    "id": "672c5ca7-1dd8-464e-9158-53679ae6d218",
+    "name": "Pesas de 10 lb",
+    "description": "Pesas de 10 lbPesas de 10 lbPesas de 10 lbPesas de 10 lbPesas de 10 lbPesas de 10 lbPesas de 10 lbPesas de 10 lbPesas de 10 lbPesas de 10 lbPesas de 10 lbPesas de 10 lbPesas de 10 lb",
+    "category": "Pesas",
+    "price": "25",
+    "image": "archivo-1698714091855.jpeg"
   }
 ]

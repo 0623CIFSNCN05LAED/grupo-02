@@ -38,11 +38,6 @@ app.use("/product", productRoutes);
 app.use("/users", usersRoutes);
 
 
-// app.use(
-//     session({ secret: "secret", resave: false, saveUninitialized: false })
-//   );
-
-
 
 //se levanta el servidor en el puerto 3000
 const PORT = 3000;

@@ -62,7 +62,7 @@ const usersController = {
         };
         
         userService.createUser(user);
-        res.redirect('/');
+        res.redirect('/users/login');
     },
     
 }

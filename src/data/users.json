@@ -66,5 +66,29 @@
     "country": "Colombia",
     "city": "Barranquilla",
     "image": "archivo-1698712744069.png"
+  },
+  {
+    "id": "e4b84f9d-8cae-42d2-9471-5fd78514db15",
+    "role": "Vendedor",
+    "name": "tomas",
+    "user": "tomas",
+    "email": "prueba@prueba.com",
+    "password": "$2b$10$hmIBr3CTEvEE3Jn6jNtH6O7lTK2.RocIzjDB1EWlVjwJpu9dvPm7W",
+    "adress": "1",
+    "country": "khgig",
+    "city": "kjhhjl",
+    "image": "archivo-1698714691233.jpeg"
+  },
+  {
+    "id": "66f72ed5-7ea6-4b63-b334-60d8dda8431b",
+    "role": "Vendedor/Comprador",
+    "name": "fabian",
+    "user": "fabian",
+    "email": "sfdgdfsg",
+    "password": "$2b$10$z7n4n1WNLB1pwb4CzBAyMOgD1Ny5iwLDY8fFFwGDpq0bH3prGBKUa",
+    "adress": "sfgfdsg",
+    "country": "sdfgfds",
+    "city": "dsfgfsdg",
+    "image": "archivo-1698714740630.jpeg"
   }
 ]
