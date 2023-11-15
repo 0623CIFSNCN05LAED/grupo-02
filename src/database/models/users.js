@@ -1,37 +1,33 @@
-'use strict';
-const {
-  Model
-} = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class Users extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
-    static associate(models) {
-        Users.hasOne(models.role, {
+    const Model = sequelize.define(
+      "Users",
+      {
+        id:{
+            type: DataTypes.INTEGER,
+            autoIncremental: true
+        },
+        name: DataTypes.STRING,
+        user: DataTypes.STRING,
+        email: DataTypes.STRING,
+        role_id: DataTypes.INTEGER,
+        password: DataTypes.STRING,
+        adress: DataTypes.STRING,
+        country: DataTypes.STRING,
+        city: DataTypes.STRING,
+        image: DataTypes.BLOB,
+        created_at: DataTypes.DATE,
+        updated_at: DataTypes.DATE
+      },
+      {
+        tableName: "users",
+      }
+    );
+    Model.associate = function(models){
+        Model.hasOne(models.roles,{
             as: 'roles',
-            foreignKey: 'id'
+            foreignKey: 'role_id'
         })
     }
-  }
-  Users.init({
-    id: DataTypes.INTEGER,
-    name: DataTypes.STRING,
-    user: DataTypes.STRING,
-    email: DataTypes.STRING,
-    role_id: DataTypes.INTEGER,
-    password: DataTypes.STRING,
-    adress: DataTypes.STRING,
-    country: DataTypes.STRING,
-    city: DataTypes.STRING,
-    image: DataTypes.BLOB,
-    created_at: DataTypes.DATE,
-    updated_at: DataTypes.DATE
-  }, {
-    sequelize,
-    modelName: 'users',
-  });
-  return Users;
-};
+    return Model;
+  };
+  
