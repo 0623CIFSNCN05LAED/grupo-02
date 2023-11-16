@@ -29,20 +29,27 @@ const productController = {
         },
          res.redirect("/home"))
     },
-    edit: (req, res) => {
+    edit: async (req, res) => {
         const id = req.params.id;
-        const product = productService.getProduct(id);
+        const product = await productService.getProduct(id);
         res.render('product/productUpdate.ejs', {product, userData: req.session.userData })
     },
     update: (req, res) => {
-        const product = req.body;
-        const id = req.params.id;
-        const image = req.file
-          ? req.file.filename
-          : productService.getProduct(id).image;
-        product.image = image;
-        productService.updateProduct(id, product);
-        res.redirect("/home");
+        const productId = req.params.id;
+        Products.update({
+            name: req.body.name,
+            description: req.body.description,
+            category: req.body.category,
+            price: req.body.price,
+            stock: req.body.stock,
+            image: req.file ? req.file.filename : 'default-image.png'
+        },
+        {
+            where: {id : productId}
+        })
+        .then(()=> {
+            return res.redirect("/home");
+        })
       },
     destroy: (req, res) => {
         const id = req.params.id;

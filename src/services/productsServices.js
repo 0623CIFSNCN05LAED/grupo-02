@@ -25,9 +25,6 @@ const productServices = {
       }
       )},
     
-    updateProduct: (id, product) => {
-      db.products.update(id, product);
-    },
     deleteProducts: (id) => {
       db.products.delete(id);
     }
