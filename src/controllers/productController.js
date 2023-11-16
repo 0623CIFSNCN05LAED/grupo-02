@@ -1,5 +1,6 @@
 const productService = require('../services/productsServices')
 const userData = require("../middlewares/user-guard")
+const {Products} = require('../database/models')
 
 const productController = {
     index: async (req,res) => {
@@ -18,16 +19,15 @@ const productController = {
         res.render('product/productCreate.ejs', { userData: req.session.userData })
     },
     store: (req, res) => {
-        const product = {
-             name: req.body.name,
-             description: req.body.description,
-             category: req.body.category,
-             price: req.body.price,
-             stock: req.body.stock,
-             image: req.file ? req.file.filename : "default-image.png",
-         };
-         productService.createProduct(product);
-         res.redirect("/home");
+        Products.create({
+            name: req.body.name,
+            description: req.body.description,
+            category: req.body.category,
+            price: req.body.price,
+            stock: req.body.stock,
+            image: req.file ? req.file.filename : 'default-image.png',
+        },
+         res.redirect("/home"))
     },
     edit: (req, res) => {
         const id = req.params.id;

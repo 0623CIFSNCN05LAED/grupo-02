@@ -10,13 +10,6 @@ module.exports = (sequelize, DataTypes) => {
         updatedAt: 'updated_at'
       }
     );
-    Model.associate = function(models){
-        Model.hasMany(models.Products,{
-            as: 'products',
-            foreignKey: 'id'
-        })
-    }
     return Model;
   };
-  
   

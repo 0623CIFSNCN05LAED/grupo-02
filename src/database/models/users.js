@@ -21,7 +21,7 @@ module.exports = (sequelize, DataTypes) => {
     Model.associate = function(models){
         Model.hasOne(models.Roles,{
             as: 'roles',
-            foreignKey: 'role_id'
+            foreignKey: 'id'
         })
     }
     return Model;

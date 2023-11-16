@@ -1,6 +1,6 @@
 const db = require("../data/db");
 const {Products} = require('../database/models')
-const nombreArchivo = require('../middlewares/multer')
+const nombreArchivo = require('../middlewares/multer-product')
 
 const productServices = {
     getAllProducts: () => {
@@ -24,15 +24,7 @@ const productServices = {
         }
       }
       )},
-    createProduct: (body, req) => {
-      return Products.create({
-        name: body.name,
-        description: body.description,
-        category: body.category,
-        price: body.price,
-        stock: body.stock,
-        image: req.file ? req.file.fileName : 'default-image.png',
-      })},
+    
     updateProduct: (id, product) => {
       db.products.update(id, product);
     },
