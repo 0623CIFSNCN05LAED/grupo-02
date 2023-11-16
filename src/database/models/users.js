@@ -2,10 +2,6 @@ module.exports = (sequelize, DataTypes) => {
     const Model = sequelize.define(
       "Users",
       {
-        id:{
-            type: DataTypes.INTEGER,
-            autoIncremental: true
-        },
         name: DataTypes.STRING,
         user: DataTypes.STRING,
         email: DataTypes.STRING,
@@ -15,15 +11,15 @@ module.exports = (sequelize, DataTypes) => {
         country: DataTypes.STRING,
         city: DataTypes.STRING,
         image: DataTypes.BLOB,
-        created_at: DataTypes.DATE,
-        updated_at: DataTypes.DATE
       },
       {
         tableName: "users",
+        createdAt: 'created_at',
+        updatedAt: 'updated_at'
       }
     );
     Model.associate = function(models){
-        Model.hasOne(models.roles,{
+        Model.hasOne(models.Roles,{
             as: 'roles',
             foreignKey: 'role_id'
         })

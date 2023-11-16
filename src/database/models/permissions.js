@@ -2,22 +2,18 @@ module.exports = (sequelize, DataTypes) => {
     const Model = sequelize.define(
       "Permissions",
       {
-        id:{
-            type: DataTypes.INTEGER,
-            autoIncremental: true
-        },
         name: DataTypes.STRING,
         description: DataTypes.STRING,
         role_id: DataTypes.STRING,
-        created_at: DataTypes.DATE,
-        updated_at: DataTypes.DATE
       },
       {
         tableName: "permissions",
+        createdAt: 'created_at',
+        updatedAt: 'updated_at'
       }
     );
     Model.associate = function(models){
-        Model.hasMany(models.roles,{
+        Model.hasMany(models.Roles,{
             as: 'roles',
             foreignKey: 'role_id'
         })
