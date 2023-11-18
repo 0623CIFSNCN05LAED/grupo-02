@@ -1,5 +1,6 @@
 const userService = require('../services/userServices')
 const bcrypt = require('bcrypt');
+const {Users}= require('../database/models')
 
 
 const usersController = {
@@ -8,14 +9,14 @@ const usersController = {
         res.render('users/login.ejs', { userData: req.session.userData });
     },
 
-    loginData: function(req,res){
+    loginData: async function(req,res){
         const userData = {
             user: req.body.usuario,
             password:req.body.contra
         }
        
         const usuarioData = userData.user;
-        const userFound = userService.findUser(usuarioData);
+        const userFound = await userService.findUser(usuarioData);
             if(userFound){
                 bcrypt.compare(userData.password, userFound.password, (err, result) => {
                     if (err) {
@@ -48,20 +49,19 @@ const usersController = {
         
         res.render('users/register.ejs', { userData: req.session.userData } );
     },
-    store: function(req, res){
-        const user = {
-            role: req.body.role,
-            name: req.body.nombre,
-            user: req.body.usuario,
-            email: req.body.correo,
-            password: req.body.contra,
-            adress: req.body.direccion,
-            country: req.body.pais,
-            city: req.body.city,
-            image: req.file ? req.file.filename : 'default-image.png',
-        };
-        
-        userService.createUser(user);
+    store: async function(req, res){
+        const hashedPassword = await bcrypt.hash(req.body.contra, 10);
+            Users.create({
+                    role: req.body.role,
+                    name: req.body.nombre,
+                    user: req.body.usuario,
+                    email: req.body.correo,
+                    password: hashedPassword,
+                    adress: req.body.direccion,
+                    country: req.body.pais,
+                    city: req.body.city,
+                    image: req.file ? req.file.filename : 'default-image.png',
+                })
         res.redirect('/users/login');
     },
     

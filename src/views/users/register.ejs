@@ -17,12 +17,9 @@
       <form action="/users/register" method="post" enctype="multipart/form-data">
 
         <br />
-        <label for="role">Selecciona tu rol:</label>
+        <label for="role">Tu rol será:</label>
         <select class="name" name="role" id="category">
-          <option value="">Elegí</option>
-          <option value="Vendedor">Vendedor</option>
           <option value="Comprador">Comprador</option>
-          <option value="Vendedor/Comprador">Vendedor/Comprador</option>
         </select>
         <br />
 
@@ -55,19 +52,10 @@
         <br />
         <input
           class="password"
-          type="text"
+          type="password"
           id="password"
           name="contra"
           placeholder="Contraseña"
-          required
-        />
-        <br />
-        <input
-          class="confirm-password"
-          type="text"
-          id="password"
-          name="confirm-password"
-          placeholder=" Confirmar contraseña"
           required
         />
         <br />

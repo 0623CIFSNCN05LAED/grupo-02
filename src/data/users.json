@@ -90,5 +90,17 @@
     "country": "sdfgfds",
     "city": "dsfgfsdg",
     "image": "archivo-1698714740630.jpeg"
+  },
+  {
+    "id": "2941e5cb-a037-4310-bb7d-0c6febcc650f",
+    "role": "",
+    "name": "alfredo",
+    "user": "alfredo",
+    "email": "prueba@prueba.com",
+    "password": "$2b$10$pT5Uyvlo0Y90QibwTnl7SOMTWRsq2DAsPTnv8nbRamxYAZr.i5X4a",
+    "adress": "Cra 41 # 63 - 09 Apto 2C",
+    "country": "Colombia",
+    "city": "Barranquilla",
+    "image": "archivo-1699919158780.jpg"
   }
 ]
