@@ -23,11 +23,7 @@ const productServices = {
           stock: product.stock
         }
       }
-      )},
-    
-    deleteProducts: (id) => {
-      db.products.delete(id);
-    }
+      )}
 }
 
 module.exports = productServices;

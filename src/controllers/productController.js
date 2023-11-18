@@ -51,11 +51,13 @@ const productController = {
             return res.redirect("/home");
         })
       },
-    destroy: (req, res) => {
+    destroy: function (req, res) {
         const id = req.params.id;
-        productService.deleteProducts(id);
-        res.redirect("/home");
-      },
+        Products.destroy({where: {id : id}, force: true})
+        .then(()=> {
+            res.redirect("/home")})
+            .catch(error => res.send(error))
+      }
 }
 
 module.exports = productController;
