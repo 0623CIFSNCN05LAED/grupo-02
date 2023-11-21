@@ -1,6 +1,7 @@
 const productService = require('../services/productsServices')
 const userData = require("../middlewares/user-guard")
 const {Products} = require('../database/models')
+const {Category} = require('../database/models')
 
 const productController = {
     index: async (req,res) => {
@@ -8,38 +9,41 @@ const productController = {
         res.render('main/home.ejs', {products, userData: req.session.userData });
     },
     cart: function(req,res){
-        res.render('product/productCart.ejs', { userData: req.session.userData });
+        res.render('product/productCart.ejs', {userData: req.session.userData });
     },
     detail: async function(req,res){
         const id = req.params.id;
     const product = await productService.getProduct(id);
         res.render('product/productDetail.ejs', {product,userData: req.session.userData });
     },
-    create: (req, res) => {
-        res.render('product/productCreate.ejs', { userData: req.session.userData })
+    create: async (req, res) => {
+        const categories = await Category.findAll();
+        res.render('product/productCreate.ejs', { categories, userData: req.session.userData })
     },
     store: (req, res) => {
+        console.log(req.body);
         Products.create({
             name: req.body.name,
             description: req.body.description,
-            category: req.body.category,
+            category_id: req.body.category,
             price: req.body.price,
             stock: req.body.stock,
             image: req.file ? req.file.filename : 'default-image.png',
-        },
-         res.redirect("/home"))
+        })
+         res.redirect("/home")
     },
     edit: async (req, res) => {
+        const categories = await Category.findAll();
         const id = req.params.id;
         const product = await productService.getProduct(id);
-        res.render('product/productUpdate.ejs', {product, userData: req.session.userData })
+        res.render('product/productUpdate.ejs', {categories, product, userData: req.session.userData })
     },
     update: (req, res) => {
         const productId = req.params.id;
         Products.update({
             name: req.body.name,
             description: req.body.description,
-            category: req.body.category,
+            category_id: req.body.category,
             price: req.body.price,
             stock: req.body.stock,
             image: req.file ? req.file.filename : 'default-image.png'

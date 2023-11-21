@@ -27,11 +27,9 @@
                             <label class = 'label' for="category">Categoría:</label>
                             <select class = 'input' name="category" id="category">
                                 <option value="">Elegí</option>
-                                <option value="Pesas">Pesas</option>
-                                <option value="Barras">Barras</option>
-                                <option value="Discos">Discos</option>
-                                <option value="Maquinas">Maquinas</option>
-                                <option value="Otros">Otros</option>
+                                  <% categories.forEach(category => { %>
+                                  <option value="<%= category.id %>"><%= category.name %></option>
+                                  <% }); %>
                             </select>
                         </div>
                         <div>
