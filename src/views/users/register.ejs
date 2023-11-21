@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="/js/registerValidations.js" defer></script>
+    <script src="/js/showPassword.js" defer></script>
 
     <%- include('../partials/linksComunes.ejs') %>
 
@@ -14,13 +16,17 @@
 
     <main>
       <h2 class="title">Registrese aqui</h2>
-      <form action="/users/register" method="post" enctype="multipart/form-data">
+      <form action="/users/register" method="post" enctype="multipart/form-data" id="form">
 
         <br />
         <label for="role">Tu rol será:</label>
-        <select class="name" name="role" id="category">
-          <option value="Comprador">Comprador</option>
+        <select class="name" name="role" id="roles" required>
+          <option value="">Elegir</option>
+        <% roles.forEach(roles => { %>
+            <option value="<%= roles.id %>"><%= roles.name %></option>
+        <% }); %>
         </select>
+        <span class="errorMsg" id="rolesError"></span>
         <br />
 
         <input
@@ -31,6 +37,7 @@
           placeholder="Nombres y apellidos"
           required
         />
+        <span class="errorMsg" id="nombreError"></span>
         <br />
         <input
           class="user"
@@ -40,6 +47,7 @@
           placeholder="Nombre del usuario"
           required
         />
+        <span class="errorMsg" id="usuarioError"></span>
         <br />
         <input
           class="correo"
@@ -49,6 +57,7 @@
           placeholder="E-mail"
           required
         />
+        <span class="errorMsg" id="emailError"></span>
         <br />
         <input
           class="password"
@@ -58,36 +67,41 @@
           placeholder="Contraseña"
           required
         />
+        <span class="errorMsg" id="passwordError"></span>
+        <button class ='name' id="toggleButton">Mostrar/Ocultar</button>
         <br />
         <input
           class="direccion"
           type="text"
-          id="Addres"
+          id="addres"
           name="direccion"
           placeholder="Direccion"
           required
         />
+        <span class="errorMsg" id="addresError"></span>
         <br />
         <input
           class="pais"
           type="text"
-          id="Country"
+          id="country"
           name="pais"
           placeholder="Pais"
           required
         />
+        <span class="errorMsg" id="countryError"></span>
         <br />
         <input
           class="city"
           type="text"
-          id="City"
+          id="city"
           name="city"
           placeholder="Ciudad"
           required
         />
+        <span class="errorMsg" id="cityError"></span>
         <br />
         <h3>Carga tu foto de usuario</h3>
-        <input class="file" type="file" id="archivo" name="archivo" />
+        <input class="file" type="file" id="archivo" name="archivo" required />
         <br />
         <div><button class="send" type="submit">Enviar</button></div>
         <br />

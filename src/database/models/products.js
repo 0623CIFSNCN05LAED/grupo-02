@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
             as: 'category',
             foreignKey: 'id'
         })
+        
     }
     return Model;
   };

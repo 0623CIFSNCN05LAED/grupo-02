@@ -1,6 +1,9 @@
 const userService = require('../services/userServices')
 const bcrypt = require('bcrypt');
+const Sequelize = require('sequelize');
+const { Op } = Sequelize;
 const {Users}= require('../database/models')
+const {Roles} = require('../database/models')
 
 
 const usersController = {
@@ -45,14 +48,20 @@ const usersController = {
         });
     },
 
-    register: function(req,res){
-        
-        res.render('users/register.ejs', { userData: req.session.userData } );
+    register: async function(req,res){
+        const roles = await Roles.findAll({
+            where: {
+                name: {
+                  [Sequelize.Op.not]: 'Admin',
+                },
+        }
+    })
+        res.render('users/register.ejs', { roles, userData: req.session.userData } );
     },
     store: async function(req, res){
         const hashedPassword = await bcrypt.hash(req.body.contra, 10);
             Users.create({
-                    role: req.body.role,
+                    role_id: req.body.role,
                     name: req.body.nombre,
                     user: req.body.usuario,
                     email: req.body.correo,
