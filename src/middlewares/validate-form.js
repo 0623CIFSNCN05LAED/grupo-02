@@ -6,7 +6,7 @@ module.exports = (req, res, next) => {
   if (!errors.isEmpty()) {
     req.session.errors = errors.mapped();
     req.session.oldData = req.body;
-    res.redirect('users/login')
+    res.redirect('/users/login')
   } else {
     next();
   }
