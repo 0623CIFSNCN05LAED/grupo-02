@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="/js/registerValidations.js" defer></script>
+    <!-- <script src="/js/registerValidations.js" defer></script> -->
     <script src="/js/showPassword.js" defer></script>
 
     <%- include('../partials/linksComunes.ejs') %>
@@ -20,13 +20,17 @@
 
         <br />
         <label for="role">Tu rol será:</label>
-        <select class="name" name="role" id="roles" required>
+        <select class="name" name="role" id="roles">
           <option value="">Elegir</option>
         <% roles.forEach(roles => { %>
             <option value="<%= roles.id %>"><%= roles.name %></option>
         <% }); %>
         </select>
+        <% if (errorNameRegister && errorNameRegister.role && errorNameRegister.role.msg) { %>
+          <%= errorNameRegister.role.msg %>
+        <% }  %>
         <span class="errorMsg" id="rolesError"></span>
+        
         <br />
 
         <input
@@ -35,8 +39,10 @@
           id="nombre"
           name="nombre"
           placeholder="Nombres y apellidos"
-          required
         />
+        <% if (errorNameRegister && errorNameRegister.nombre && errorNameRegister.nombre.msg) { %>
+          <%= errorNameRegister.nombre.msg %>
+        <% }  %>
         <span class="errorMsg" id="nombreError"></span>
         <br />
         <input
@@ -45,8 +51,10 @@
           id="usuario"
           name="usuario"
           placeholder="Nombre del usuario"
-          required
         />
+        <% if (errorNameRegister && errorNameRegister.usuario && errorNameRegister.usuario.msg) { %>
+          <%= errorNameRegister.usuario.msg %>
+        <% }  %>
         <span class="errorMsg" id="usuarioError"></span>
         <br />
         <input
@@ -55,8 +63,11 @@
           id="email"
           name="correo"
           placeholder="E-mail"
-          required
+          
         />
+        <% if (errorNameRegister && errorNameRegister.correo && errorNameRegister.correo.msg) { %>
+          <%= errorNameRegister.correo.msg %>
+        <% }  %>
         <span class="errorMsg" id="emailError"></span>
         <br />
         <input
@@ -65,8 +76,11 @@
           id="password"
           name="contra"
           placeholder="Contraseña"
-          required
+          
         />
+        <% if (errorNameRegister && errorNameRegister.contra && errorNameRegister.contra.msg) { %>
+          <%= errorNameRegister.contra.msg %>
+        <% }  %>
         <span class="errorMsg" id="passwordError"></span>
         <button class ='name' id="toggleButton">Mostrar/Ocultar</button>
         <br />
@@ -76,8 +90,11 @@
           id="addres"
           name="direccion"
           placeholder="Direccion"
-          required
+          
         />
+        <% if (errorNameRegister && errorNameRegister.direccion && errorNameRegister.direccion.msg) { %>
+          <%= errorNameRegister.direccion.msg %>
+        <% }  %>
         <span class="errorMsg" id="addresError"></span>
         <br />
         <input
@@ -86,8 +103,11 @@
           id="country"
           name="pais"
           placeholder="Pais"
-          required
+          
         />
+        <% if (errorNameRegister && errorNameRegister.pais && errorNameRegister.pais.msg) { %>
+          <%= errorNameRegister.pais.msg %>
+        <% }  %>
         <span class="errorMsg" id="countryError"></span>
         <br />
         <input
@@ -96,12 +116,15 @@
           id="city"
           name="city"
           placeholder="Ciudad"
-          required
+          
         />
+        <% if (errorNameRegister && errorNameRegister.city && errorNameRegister.city.msg) { %>
+          <%= errorNameRegister.city.msg %>
+        <% }  %>
         <span class="errorMsg" id="cityError"></span>
         <br />
         <h3>Carga tu foto de usuario</h3>
-        <input class="file" type="file" id="archivo" name="archivo" required />
+        <input class="file" type="file" id="archivo" name="archivo" />
         <br />
         <div><button class="send" type="submit">Enviar</button></div>
         <br />

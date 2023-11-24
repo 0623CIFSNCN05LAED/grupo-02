@@ -7,11 +7,9 @@ const {Roles} = require('../database/models')
 
 
 const usersController = {
-    login: function(req,res){
-        
-        res.render('users/login.ejs', { userData: req.session.userData });
-    },
-
+        login: function(req, res){
+            res.render('users/login.ejs', { errors: req.session.errors, userData: req.session.userData , userError: req.session.userError , contraError: req.session.errorContra });
+        },
     loginData: async function(req,res){
         const userData = {
             user: req.body.usuario,
@@ -56,7 +54,9 @@ const usersController = {
                 },
         }
     })
-        res.render('users/register.ejs', { roles, userData: req.session.userData } );
+    console.log(req.session.errorNameRegister)
+        res.render('users/register.ejs', { errorNameRegister: req.session.errorNameRegister, roles, userData: req.session.userData } );
+
     },
     store: async function(req, res){
         const hashedPassword = await bcrypt.hash(req.body.contra, 10);
