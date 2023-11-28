@@ -22,9 +22,24 @@
       <div class = "center">
 
       <form action="/users/login" method="post" class = "input-login product-shadow" >
-      <input class="users-login" type="text" id="usuario" name="usuario" placeholder="Usuario" required>
+      <input class="users-login" type="text" id="usuario" name="usuario" placeholder="Usuario" >
+      <% if (errors && errors.usuario && errors.usuario.msg) { %>
+        <%= errors.usuario.msg %>
+      <% } else if (!errors || !errors.usuario) { %>
+        <% if (userError) { %>
+          <%= userError %>
+        <% } %>
+      <% } %>
+      
       <br>
-      <input class="users-login" type="password" id="password" name="contra" placeholder= "Contraseña" required>
+      <input class="users-login" type="password" id="contra" name="contra" placeholder= "Contraseña" >
+      <% if (errors && errors.contra && errors.contra.msg) { %>
+        <%= errors.contra.msg %>
+      <% } else if (!errors || !errors.contra) { %>
+        <% if (contraError) { %>
+          <%= contraError %>
+        <% } %>
+      <% } %>
       <br>
       <div> <button class = 'inicio-login' type="submit">Iniciar sesión</button> </div>
       </form>

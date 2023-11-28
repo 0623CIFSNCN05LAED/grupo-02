@@ -1,0 +1,17 @@
+const { body } = require("express-validator");
+
+
+const validationRegister = [
+
+    body("role").notEmpty().withMessage("Debe completar este campo"),
+    body("nombre").notEmpty().withMessage("Debe completar este campo").isLength({min: 2}).withMessage("Debe tener mas de 2 caracteres"),
+    body("usuario").notEmpty().withMessage("Debe completar este campo").isLength({min: 2}).withMessage("Debe tener mas de 2 caracteres"),
+    body("correo").notEmpty().withMessage("Debe completar este campo").isEmail().withMessage("Debe colocar un email valido"),
+    body("contra").notEmpty().withMessage("Debe completar este campo").isLength({min: 8}).withMessage("Debe tener mas de 8 caracteres."),
+    body("direccion").notEmpty().withMessage("Debe completar este campo"),
+    body("pais").notEmpty().withMessage("Debe completar este campo"),
+    body("city").notEmpty().withMessage("Debe completar este campo"),
+
+]
+
+module.exports = validationRegister;

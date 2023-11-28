@@ -23,8 +23,8 @@ const validations = [
     },
     {
       field: "password",
-      check: (input) => input.value.length >= 3,
-      message: "Debe contener al menos tres caracteres",
+      check: (input) => input.value.length >= 8,
+      message: "Debe contener al menos ocho caracteres",
     },
     {
       field: "addres",
@@ -49,7 +49,6 @@ const validations = [
     const inputErrorMsg = document.getElementById(inputId + "Error");
   
     function validate() {
-      console.log("input.value", input.value);
       inputValidation(validation, input, inputErrorMsg);
     }
   
@@ -85,7 +84,6 @@ function inputValidation(validation, input, inputErrorMsg) {
   }
 
   if (!validation.check(input)) {
-    console.log(inputErrorMsg)
     inputErrorMsg.innerText = validation.message;
     inputErrorMsg.classList.add("display");
     return false;

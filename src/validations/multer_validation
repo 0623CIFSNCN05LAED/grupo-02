@@ -1,0 +1,24 @@
+
+const multerValidation = async function(req, res, next){
+
+    const file = req.file ? req.file.originalname : 'default-image.png';
+
+    const extensionesValidas = ['.jpg', '.jpeg', '.png', '.gif'];
+
+    function getFileExtension(file) {
+        return '.' + file.split('.').pop().toLowerCase();
+    }
+
+    const extension = getFileExtension(file);
+
+
+  if (!extensionesValidas.includes(extension)) {
+        req.session.multer = 'Tipo de archivo no permitido';
+        res.redirect('/users/register')
+  } else {
+    next()
+  }
+}
+
+module.exports = multerValidation
+
