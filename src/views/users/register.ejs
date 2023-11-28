@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <script src="/js/registerValidations.js" defer></script> -->
+   <script src="/js/registerValidations.js" defer></script>
     <script src="/js/showPassword.js" defer></script>
+    <script src="/js/multerValidation.js" defer></script>
 
     <%- include('../partials/linksComunes.ejs') %>
 
@@ -67,7 +68,11 @@
         />
         <% if (errorNameRegister && errorNameRegister.correo && errorNameRegister.correo.msg) { %>
           <%= errorNameRegister.correo.msg %>
-        <% }  %>
+        <% } else { %>
+          <% if(errorEmail){ %>
+            <%= errorEmail %>
+          <%}%>
+        <% } %>
         <span class="errorMsg" id="emailError"></span>
         <br />
         <input
@@ -125,10 +130,16 @@
         <br />
         <h3>Carga tu foto de usuario</h3>
         <input class="file" type="file" id="archivo" name="archivo" />
+        
+        <% if (multerError) { %>
+          <%= multerError %>
+        <%}%>
         <br />
         <div><button class="send" type="submit">Enviar</button></div>
+        
         <br />
         <input class="erase" type="reset" value="Borrar" />
+      
       </form>
     </main>
 

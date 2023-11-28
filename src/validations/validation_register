@@ -1,5 +1,6 @@
 const { body } = require("express-validator");
 
+
 const validationRegister = [
 
     body("role").notEmpty().withMessage("Debe completar este campo"),
@@ -10,6 +11,7 @@ const validationRegister = [
     body("direccion").notEmpty().withMessage("Debe completar este campo"),
     body("pais").notEmpty().withMessage("Debe completar este campo"),
     body("city").notEmpty().withMessage("Debe completar este campo"),
+
 ]
 
 module.exports = validationRegister;

@@ -1,0 +1,15 @@
+const { Users } = require("../database/models");
+
+const registerEmail = async function(req, res, next){
+    const emailUser = req.body.correo;
+
+    const emailFound = await Users.findOne({where:{ email: emailUser} })
+    if (emailFound){
+        req.session.emailError = 'Este email ya se encuentra registrado'
+        res.redirect('/users/register')
+    }else {
+        next()
+    }
+}
+
+module.exports = registerEmail

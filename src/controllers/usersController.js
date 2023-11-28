@@ -25,7 +25,6 @@ const usersController = {
                       if (result) {
                         const data = req.body;
                         req.session.userData = data;
-                        console.log(data)
                         res.redirect('/')
                       } else {
                         res.redirect("/users/login")
@@ -54,8 +53,7 @@ const usersController = {
                 },
         }
     })
-    console.log(req.session.errorNameRegister)
-        res.render('users/register.ejs', { errorNameRegister: req.session.errorNameRegister, roles, userData: req.session.userData } );
+        res.render('users/register.ejs', { errorNameRegister: req.session.errorNameRegister, errorEmail: req.session.emailError, multerError : req.session.multer, roles, userData: req.session.userData } );
 
     },
     store: async function(req, res){
