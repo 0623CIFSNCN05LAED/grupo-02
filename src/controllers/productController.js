@@ -3,6 +3,7 @@ const userData = require("../middlewares/user-guard")
 const {Products} = require('../database/models')
 const {Category} = require('../database/models')
 
+
 const productController = {
     index: async (req,res) => {
         const products = await productService.getAllProducts();
@@ -18,7 +19,7 @@ const productController = {
     },
     create: async (req, res) => {
         const categories = await Category.findAll();
-        res.render('product/productCreate.ejs', { categories, userData: req.session.userData })
+        res.render('product/productCreate.ejs', { categories, userData: req.session.userData , multerProductCreated: req.session.multerProductCreated, errors : req.session.errorsProduct })
     },
     store: (req, res) => {
         console.log(req.body);
@@ -36,7 +37,7 @@ const productController = {
         const categories = await Category.findAll();
         const id = req.params.id;
         const product = await productService.getProduct(id);
-        res.render('product/productUpdate.ejs', {categories, product, userData: req.session.userData })
+        res.render('product/productUpdate.ejs', {categories, product, userData: req.session.userData , errors : req.session.errorsProduct, multerProductEdit: req.session.multerProductEdit })
     },
     update: (req, res) => {
         const productId = req.params.id;
