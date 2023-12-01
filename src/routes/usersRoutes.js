@@ -10,7 +10,7 @@ const validateUser = require("../validations/validation_users");
 const validateRegister = require("../validations/validation_register");
 const validRegi = require("../validations/valid_register");
 const registerEmail = require("../validations/valid_email_register")
-const multerValidation = require("../validations/multer_validation")
+const multerValidation = require("../validations/multer_validation_register")
 
 const storage = multer.diskStorage({
     destination: path.join(__dirname, "../../public/images/users"),

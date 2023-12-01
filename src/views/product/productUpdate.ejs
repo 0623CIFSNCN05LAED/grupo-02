@@ -21,11 +21,17 @@
                             <label class = 'label' for="name">Nombre del producto:</label>
                             <input class = 'input' type="text" id="name" name="name" placeholder="Ej: Mancuernas de 5 libras"
                                 value="<%= product.name %>">
+                                <% if (errors && errors.name){ %>
+                                    <%= errors.name.msg %>
+                                  <%}%>
                         </div>
                         <div>
                             <label class = 'label' for="price">Precio del producto:</label>
                             <input class = 'input' type="text" id="price" name="price" placeholder="Ej: 1000"
                                 value="<%= product.price %>">
+                                <% if (errors && errors.price){ %>
+                                    <%= errors.price.msg %>
+                                  <%}%>
                         </div>
                         <div>
                             <label class = 'label' for="category">Categoría:</label>
@@ -35,13 +41,29 @@
                                     <option value="<%= category.id %>"><%= category.name %></option>
                                     <% }); %>
                             </select>
+                            <% if (errors && errors.category){ %>
+                                <%= errors.category.msg %>
+                              <%}%>
                         </div>
+                        <div>
+                            <label class ='label' for="stock">Stock:</label>
+                            <input type="number" id="stock" name="stock" pattern="\d*" oninput="validarNumero(this)">
+                            <% if (errors && errors.stock){ %>
+                              <%= errors.stock.msg %>
+                            <%}%>
+                      </div>
                         <div>
                             <label class = 'label' for="description">Descipción:</label>
                             <textarea class = 'input' name="description" id="description"> <%= product.description %> </textarea>
+                            <% if (errors && errors.description){ %>
+                                <%= errors.description.msg %>
+                              <%}%>
                         </div>
                         <h3>Carga la imagen del producto</h3>
                             <input class = 'input' type="file" id="archivo" name="archivo">
+                            <% if (multerProductEdit){ %>
+                                <%= multerProductEdit %>
+                              <%}%>
                             <br>
                         <div class = 'last-div'>
                             <button type="submit">Guardar producto</button>

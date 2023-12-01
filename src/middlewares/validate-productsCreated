@@ -1,0 +1,13 @@
+const { validationResult } = require("express-validator");
+
+module.exports = (req, res, next) => {
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    req.session.errorsProduct = errors.mapped();
+    req.session.oldData = req.body;
+    res.redirect('/product/create')
+    console.log(req.session.errorsProduct);
+  } else {
+    next();
+  }
+};
