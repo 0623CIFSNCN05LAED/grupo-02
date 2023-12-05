@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/productCreate.css" />
     <%- include('../partials/linksComunes.ejs') %>
-
+    <script src="/js/multerValidation.js" defer></script>
+    <script src="/js/productValidation.js" defer></script>
     <title>Fuerza y Disciplina</title>
   </head>
   <body>
@@ -21,13 +22,15 @@
                             <% if (errors && errors.name){ %>
                               <%= errors.name.msg %>
                             <%}%>
+                            <span class="errorMsg" id="nameError"></span>
                         </div>
                         <div>
                             <label class = 'label' for="price">Precio del producto:</label>
-                            <input class = 'input' type="text" id="price" name="price" placeholder="Ej: 1000">
+                            <input class = 'input' type="number" id="price" name="price" placeholder="Ej: 1000">
                             <% if (errors && errors.price){ %>
                               <%= errors.price.msg %>
                             <%}%>
+                            <span class="errorMsg" id="priceError"></span>
                         </div>
                         <div>
                             <label class = 'label' for="category">Categoría:</label>
@@ -40,6 +43,7 @@
                             <% if (errors && errors.category){ %>
                               <%= errors.category.msg %>
                             <%}%>
+                            <span class="errorMsg" id="categoryError"></span>
                         </div>
                         <div>
                               <label class ='label' for="stock">Stock:</label>
@@ -47,6 +51,7 @@
                               <% if (errors && errors.stock){ %>
                                 <%= errors.stock.msg %>
                               <%}%>
+                              <span class="errorMsg" id="stockError"></span>
                         </div>
                         <div>
                             <label class = 'label' for="description">Descripción:</label>
@@ -54,6 +59,7 @@
                             <% if (errors && errors.description){ %>
                               <%= errors.description.msg %>
                             <%}%>
+                            <span class="errorMsg" id="descriptionError"></span>
                         </div>
                         <h3>Carga la imagen del producto</h3>
                             <input class = 'input' type="file" id="archivo" name="archivo">
