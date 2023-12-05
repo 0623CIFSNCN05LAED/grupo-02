@@ -17,14 +17,14 @@ const usersController = {
         }
        
         const usuarioData = userData.user;
+        const name = await Users.findOne({where:{ email: userData.user} })
         const userFound = await userService.findUser(usuarioData);
             if(userFound){
                 bcrypt.compare(userData.password, userFound.password, (err, result) => {
                     if (err) {
                     } else {
                       if (result) {
-                        const data = req.body;
-                        req.session.userData = data;
+                        req.session.userData = name.dataValues.name;
                         res.redirect('/')
                       } else {
                         res.redirect("/users/login")

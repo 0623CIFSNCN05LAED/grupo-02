@@ -7,6 +7,7 @@
     <link rel='stylesheet' href='/css/login.css'>
     <title>fuerza y disiplina </title>
     <%- include('../partials/linksComunes.ejs') %>
+    <script src="/js/loginValidation.js" defer></script>
 </head>
 
 
@@ -22,7 +23,7 @@
       <div class = "center">
 
       <form action="/users/login" method="post" class = "input-login product-shadow" >
-      <input class="users-login" type="text" id="usuario" name="usuario" placeholder="Usuario" >
+      <input class="users-login" type="email" id="usuario" name="usuario" placeholder="Email" >
       <% if (errors && errors.usuario && errors.usuario.msg) { %>
         <%= errors.usuario.msg %>
       <% } else if (!errors || !errors.usuario) { %>
@@ -30,7 +31,7 @@
           <%= userError %>
         <% } %>
       <% } %>
-      
+      <span class="errorMsg" id="usuarioError"></span>
       <br>
       <input class="users-login" type="password" id="contra" name="contra" placeholder= "Contraseña" >
       <% if (errors && errors.contra && errors.contra.msg) { %>
@@ -40,6 +41,7 @@
           <%= contraError %>
         <% } %>
       <% } %>
+      <span class="errorMsg" id="contraError"></span>
       <br>
       <div> <button class = 'inicio-login' type="submit">Iniciar sesión</button> </div>
       </form>

@@ -6,6 +6,7 @@ const {Category} = require('../database/models')
 
 const productController = {
     index: async (req,res) => {
+        console.log(req.session.userData)
         const products = await productService.getAllProducts();
         res.render('main/home.ejs', {products, userData: req.session.userData });
     },
