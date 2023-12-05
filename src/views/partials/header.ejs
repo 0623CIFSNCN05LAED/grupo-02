@@ -7,7 +7,7 @@
         <a href='/users/register'><div class = 'register'> Registrate aqui <i class="fa-solid fa-right-to-bracket" style="color: #005eff;"></i> </div></a>
         
         <% if (userData) { %>
-            <div>Bienvenido, <%= userData.usuario %></div>
+            <div>Bienvenido, <%= userData %></div>
             <a href="/users/logout">Cerrar sesión</a>
           <% } else { %>
             <a href='/users/login'><div class = 'login'> Ingresa aqui <i class="fa-solid fa-user" style="color: #005eff;"></i> </div></a>

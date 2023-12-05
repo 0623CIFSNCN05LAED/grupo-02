@@ -5,7 +5,7 @@ const { use } = require("../routes/productRoutes");
 const userServices = {
     findUser: async (user) => {
         const users = await Users.findAll()
-        const userName = users.find((p) => user == p.user);
+        const userName = users.find((p) => user == p.email);
       return userName;
 }
 }
