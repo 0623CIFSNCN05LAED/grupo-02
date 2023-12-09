@@ -12,10 +12,17 @@ const multerValidEdit = require('../validations/multer_valid_editProduct');
 
 const productController = require ('../controllers/productController.js');
 
+
 router.get('/cart', authenticated , productController.cart);
 
 router.get('/create', authenticated ,productController.create);
 router.post("/home", upload.single("archivo"), productValidation, validateForm, multerValidation, productController.store);
+
+router.get("/pesas/", productController.pesasView);
+router.get("/otros/", productController.otrosView);
+router.get("/maquinas/", productController.maquinasView);
+router.get("/discos/", productController.discosView);
+router.get("/barras/", productController.barrasView);
 
 router.get("/detail/:id/", productController.detail);
 
