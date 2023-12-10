@@ -25,6 +25,7 @@ router.get("/discos/", productController.discosView);
 router.get("/barras/", productController.barrasView);
 
 router.get("/detail/:id/", productController.detail);
+router.post('/detail/:id/', authenticated , productController.cartAdd);
 
 
 router.get("/edit/:id", authenticated , productController.edit);

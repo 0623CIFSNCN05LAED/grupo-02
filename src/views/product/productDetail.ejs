@@ -8,6 +8,7 @@
    <body>
       <%- include('../partials/header.ejs') %>
     <main>
+      <form action="/product/detail/<%= product.id %>" method="POST">
             <div class = 'contenedor'>
                           <div class = 'img'>
                               <img src="/images/products/<%= product.image %>" alt="product image" class = 'img-c' />
@@ -18,9 +19,10 @@
                                   <%= product.description %>
                               </p>
                                   <h2> $<%= product.price %> US </h2>
-                                <a href="/"> <input type="button" value="Agregar al carrito" class = 'b-carrito'></a> 
+                                <a href="/product/cart"> <input type="submit" value="Agregar al carrito" class = 'b-carrito'></a> 
                                 <hr/>
                                 <div class = 'botones'>
+                                </form>
                                   <a href="/product/edit/<%= product.id %>"> <input type="button" value="Editar el producto" class = 'botoneyd'></a>                                 
                                   <form action="/product/<%= product.id %>?_method=delete" method="POST">
                                       <button class = 'botoneyd' type="submit">

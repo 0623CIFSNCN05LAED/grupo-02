@@ -6,8 +6,9 @@
 
     <%- include('../partials/linksComunes.ejs') %>
     <link rel="stylesheet" href="/css/productCart.css">
+    <script src="/js/cart.js" defer></script>
 
-    <title>Document</title>
+    <title>Carrito de compras</title>
 </head>
 <body>
 
@@ -17,54 +18,50 @@
     <h2 class="carrito__titulo">Carrito de compras</h2>
     
     <form action="" class="formulario__tabla">
-    
         <table>
-            <tr class="tabla__titulos">
-                <th>PRODUCTO</th>
-                <th class="tabla__columnaCantidad">CANTIDAD</th>
-                <th class="tabla__columnaEliminar">ELIMINAR</th>
-            </tr>
-            <tr>
-                <td>
-                    <div class="tabla__columnaProducto">
-                        <img src="/images/products/bancoPlano.jpg" alt="Banco Plano" class="tabla__imagenProducto">
-                        <div class="tabla__descripcionProducto">
-                            <p>Banco Plano </p>
-                            <p>Precio: $15000 </p>
-                            <p>Subtotal: $15000 </p>
-                        </div>
-                    </div>
-                </td>
-                <td>
-                    <input type="number" class="tabla__inputCantidad">
-                </td>
-                <td>
-                    <p class="tabla__eliminar">X</p>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="tabla__columnaProducto">
-                        <img src="/images/products/mancuernas1kg.jpg" alt="mancuernas 1kg" class="tabla__imagenProducto">
-                        <div class="tabla__descripcionProducto">
-                            <p>Par de mancuernas de 1 kg</p>
-                            <p>Precio: $5500</p>
-                            <p>Subtotal: $5500</p>
-                        </div>
-                    </div>
-                </td>
-                <td>
-                    <input type="number" class="tabla__inputCantidad">
-                </td>
-                <td>
-                    <p class="tabla__eliminar">X</p>
-                </td>
-            </tr>
-    </table>
-
-    <p class="tabla__total">TOTAL: $20500</p>
-    <button type="submit" class="tabla__buttonPagar">Ir a Pagar</button>
-    </form>
+            <% if (product) { %>
+                <thead>
+                    <tr>
+                        <th>Imagen</th>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Valor total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% product.forEach((item, index) => { %>
+                        <tr>
+                            <td>
+                                <img src="/images/products/<%= item.image %>" alt="product image" class="img-c" />
+                            </td>
+                            <td>
+                                <%= item.name %>
+                            </td>
+                            <td class="price">
+                                $<%= item.price %>
+                            </td>
+                            <td>
+                                <label>
+                                    Cantidad:
+                                    <input data-index="<%= index %>" type="number" value="1" min="1" class="cantidad">
+                                </label>
+                            </td>
+                            <td class="total-carrito">
+                                $<%= item.price %>
+                            </td>
+                        </tr>
+                        <% }) %>
+                    
+                    <td class = 'total'>
+                        Elija cantidad para calcular el valor.
+                        <%}%>
+                    </td>
+                </tbody>
+            </table>
+            <ul id="lista-carrito"></ul>
+        <button type="submit" class="tabla__buttonPagar">Ir a Pagar</button>
+      </form>
     </main>
     <%- include('../partials/footer.ejs') %>
 </body>

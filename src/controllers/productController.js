@@ -36,7 +36,20 @@ const productController = {
         res.render('product/productBarras.ejs', {products, userData: req.session.userData });
     },
     cart: function(req,res){
-        res.render('product/productCart.ejs', {userData: req.session.userData });
+        res.render('product/productCart.ejs', {userData: req.session.userData , product : req.session.cart});
+    },
+    cartAdd : async function (req, res){
+        const id = req.params.id
+        console.log(id);
+        const product = await Products.findByPk(id);
+        if (product){
+            if (!req.session.cart){
+                req.session.cart = [];
+            }
+            req.session.cart.push(product);
+        }
+        console.log(req.session.cart);
+        res.redirect('/product/cart');
     },
     detail: async function(req,res){
         const id = req.params.id;
