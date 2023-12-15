@@ -15,9 +15,7 @@ const productServices = {
           id: product.id,
           name: product.name,
           description: product.description,
-          category_id: {
-           id : product.category ? product.category.id : null
-          },
+          category_id: product.category_id,
           price: product.price,
           image: product.image,
           stock: product.stock
