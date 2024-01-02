@@ -31,13 +31,19 @@ const viewsPath = path.join(__dirname, "/views");
 app.set("view engine", "ejs");
 app.set("views", viewsPath);
 
+
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*'); // Replace with the actual origin of your React app
+  res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'Content-Type');
+  next();
+});
+
 //se definen las rutas a cada uno de los recursos de la aplicacion
 
 app.use("/", mainRoutes);
 app.use("/product", productRoutes);
 app.use("/users", usersRoutes);
-
-
 
 //se levanta el servidor en el puerto 3000
 const PORT = 3000;

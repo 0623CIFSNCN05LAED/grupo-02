@@ -40,6 +40,17 @@ const usersApiController = {
             }, 
             data: result
         })
+    },
+    'lastUser': async (req, res) => {
+        const users = await Users.findAll()
+        const lastUser = users[users.length - 1]
+        res.json({
+            meta: {
+                status: 200,
+                url: req.originalUrl, 
+            }, 
+            data: lastUser,
+        })
     }
 }
 
