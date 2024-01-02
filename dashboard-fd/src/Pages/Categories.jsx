@@ -31,7 +31,7 @@ function Categories() {
           {category.map(category => (
           <div key={category.name} className="grid text-white grid-cols-1 md:grid-cols-4 gap-4 items-center mb-4 bg-secondary-900 p-4 rounded-xl">
             <div>
-              <h5 className="md:hidden text-white font-bold mb-2">Name of category</h5>
+              <h5 className="md:hidden text-white font-bold mb-2">Nombre de la categoria</h5>
               <p>{category.name}</p>
             </div>
             <div>

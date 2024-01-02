@@ -29,6 +29,10 @@ const Card = (props) => {
       status = "bg-pink-500/10 text-pink-500";
       textColor = "text-pink-500";
       break;
+      case "last-product":
+      status = "bg-pink-500/10 text-red-500";
+      textColor = "text-red-500";
+      break;
   }
 
   return (

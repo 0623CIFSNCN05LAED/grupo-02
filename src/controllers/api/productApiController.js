@@ -51,7 +51,6 @@ const productsApiController = {
   'categories' : async (req, res) => {
     const categories = await Category.findAll();
     const categoriesSize = categories.length;
-    console.log(categoriesSize)
     res.json({
         meta: {
             status: 200,
@@ -61,8 +60,8 @@ const productsApiController = {
     })
   },
   'lastProduct' : async (req, res) => {
-    const product = await Products.findAll()
-    const lastProduct = product[product.length - 1]
+    const products = await Products.findAll()
+    const lastProduct = products[products.length - 1]
     res.json({
         meta: {
           status: 200,
