@@ -14,6 +14,7 @@ const productController = require ('../controllers/productController.js');
 
 
 router.get('/cart', authenticated , productController.cart);
+router.get('/destroycart', productController.destroycart)
 
 router.get('/create', authenticated ,productController.create);
 router.post("/home", upload.single("archivo"), productValidation, validateForm, multerValidation, productController.store);

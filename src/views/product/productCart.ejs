@@ -52,15 +52,21 @@
                             </td>
                         </tr>
                         <% }) %>
+                        
                     
                     <td class = 'total'>
                         Elija cantidad para calcular el valor.
                         <%}%>
                     </td>
                 </tbody>
+
+                
             </table>
+
             <ul id="lista-carrito"></ul>
         <button type="submit" class="tabla__buttonPagar">Ir a Pagar</button>
+
+        <a href = '/product/destroycart'> <input type="button" value="Eliminar los productos del carrito" class = 'botoneyd'> </a> 
       </form>
     </main>
     <%- include('../partials/footer.ejs') %>

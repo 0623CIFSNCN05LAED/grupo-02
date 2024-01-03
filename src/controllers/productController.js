@@ -101,7 +101,14 @@ const productController = {
         .then(()=> {
             res.redirect("/home")})
             .catch(error => res.send(error))
-      }
+      },
+    destroycart: function(req, res){
+        delete req.session.cart
+
+        res.redirect('/');
+       
+    },
+     
 }
 
 module.exports = productController;
