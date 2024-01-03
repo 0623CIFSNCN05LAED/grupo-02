@@ -108,6 +108,23 @@ const productController = {
         res.redirect('/');
        
     },
+    // search: async (req, res) => {
+    //     const query = req.query.q;
+    
+    //     if (!query) {
+    //         return res.status(400).json({ error: 'La consulta de búsqueda está vacía.' });
+    //     }
+    
+    //     try {
+    //         const connection = await mysql.createConnection(dbConfig);
+    //         const [resultados] = await connection.execute('SELECT * FROM products WHERE nombre LIKE ?', [`%${query}%`]);
+    //         connection.end();
+    //         res.json(resultados);
+    //     } catch (error) {
+    //         console.error('Error al realizar la búsqueda en la base de datos:', error);
+    //         res.status(500).json({ error: 'Error interno del servidor' });
+    //     }
+    // }
      
 }
 
