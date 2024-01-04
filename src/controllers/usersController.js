@@ -24,7 +24,7 @@ const usersController = {
                     if (err) {
                     } else {
                       if (result) {
-                        req.session.userData = name.dataValues.name;
+                        req.session.userData = name.dataValues;
                         res.redirect('/')
                       } else {
                         res.redirect("/users/login")
@@ -46,18 +46,16 @@ const usersController = {
     },
 
     register: async function(req,res){
-        const roles = await Roles.findAll({
-            where: {
-                name: {
-                  [Sequelize.Op.not]: 'Admin',
-                },
-        }
-    })
+        const roles = await Roles.findAll()
+        console.log(req.session.errorNameRegister)
         res.render('users/register.ejs', { errorNameRegister: req.session.errorNameRegister, errorEmail: req.session.emailError, multerError : req.session.multer, roles, userData: req.session.userData } );
 
     },
     store: async function(req, res){
         const hashedPassword = await bcrypt.hash(req.body.contra, 10);
+            if (!req.body.role){
+                req.body.role = 1;
+            }
             Users.create({
                     role_id: req.body.role,
                     name: req.body.nombre,

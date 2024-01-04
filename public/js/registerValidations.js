@@ -2,11 +2,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 const validations = [
     {
-      field: "roles",
-      check: (input) => input.value != 0,
-      message: "Debe elegir un rol",
-    },
-    {
       field: "nombre",
       check: (input) => input.value.length >= 3,
       message: "Debe contener al menos tres caracteres",

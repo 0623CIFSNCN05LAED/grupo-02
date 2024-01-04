@@ -1,24 +1,26 @@
 
 const multerValidation = async function(req, res, next){
+  const file = req.file
+  if (!file || file.originalname === 'default-image.png') {
+    req.session.multer = 'Ups no se ha cargado ninguna imagen';
+    return res.redirect('/users/register');
+  }
 
-    const file = req.file ? req.file.originalname : 'default-image.png';
+  const extensionesValidas = ['.jpg', '.jpeg', '.png', '.gif'];
 
-    const extensionesValidas = ['.jpg', '.jpeg', '.png', '.gif'];
+  function getFileExtension(file) {
+    return '.' + file.split('.').pop().toLowerCase();
+  }
 
-    function getFileExtension(file) {
-        return '.' + file.split('.').pop().toLowerCase();
-    }
-
-    const extension = getFileExtension(file);
-
+  const extension = getFileExtension(file.originalname);
 
   if (!extensionesValidas.includes(extension)) {
-        req.session.multer = 'Tipo de archivo no permitido';
-        res.redirect('/users/register')
-  } else {
-    next()
+    req.session.multer = 'Tipo de archivo no permitido';
+    return res.redirect('/users/register');
   }
-}
+
+  next();
+};
 
 module.exports = multerValidation
 

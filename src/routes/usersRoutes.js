@@ -37,6 +37,6 @@ router.get('/logout', usersController.logout)
 router.get('/register',usersController.register);
 router.post('/register', urlencoded({
   extended: false,
-}),upload.single("archivo"), validateRegister,multerValidation, registerEmail,  validRegi, usersController.store)
+}),upload.single("archivo"), validateRegister, multerValidation, registerEmail, validRegi, usersController.store)
 
 module.exports = router; 

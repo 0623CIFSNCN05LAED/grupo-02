@@ -18,8 +18,9 @@
     <main>
       <h2 class="title">Registrese aqui</h2>
       <form action="/users/register" method="post" enctype="multipart/form-data" id="form">
-
+        
         <br />
+        <% if (userData && userData.role_id == 2) { %>
         <label for="role">Tu rol será:</label>
         <select class="name" name="role" id="roles">
           <option value="">Elegir</option>
@@ -31,8 +32,9 @@
           <%= errorNameRegister.role.msg %>
         <% }  %>
         <span class="errorMsg" id="rolesError"></span>
-        
+        <% } %>
         <br />
+        
 
         <input
           class="name"
@@ -130,10 +132,14 @@
         <br />
         <h3>Carga tu foto de usuario</h3>
         <input class="file" type="file" id="archivo" name="archivo" />
-        
+        <% if (errorNameRegister && errorNameRegister.archivo && errorNameRegister.archivo.msg) { %>
+          <%= errorNameRegister.archivo.msg %>
+        <% }  %>
+
         <% if (multerError) { %>
           <%= multerError %>
         <%}%>
+        
         <br />
         <div><button class="send" type="submit">Enviar</button></div>
         

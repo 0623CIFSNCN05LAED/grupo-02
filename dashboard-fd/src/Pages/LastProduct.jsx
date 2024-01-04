@@ -72,7 +72,7 @@ function LastProduct() {
                     <h5>ID</h5>
                     <h5>Name</h5>
                     <h5>Email</h5>
-                    <h5>Pais</h5>
+                    <h5>Role</h5>
                 </div>
           <div key={user.id} className="grid text-white grid-cols-1 md:grid-cols-4 gap-4 items-center mb-4 bg-secondary-900 p-4 rounded-xl">
             <div>
@@ -88,8 +88,8 @@ function LastProduct() {
               <span>{user.email}</span>
             </div>
             <div>
-              <h5 className="md:hidden text-white font-bold mb-2">Pais</h5>
-              <span>{user.country}</span>
+              <h5 className="md:hidden text-white font-bold mb-2">Role</h5>
+              <span>{user.role_id}</span>
             </div>
           </div>
       </div>
