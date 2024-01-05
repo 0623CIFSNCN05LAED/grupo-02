@@ -2,11 +2,12 @@ const productService = require('../services/productsServices')
 const userData = require("../middlewares/user-guard")
 const {Products} = require('../database/models')
 const {Category} = require('../database/models')
+const Sequelize = require('sequelize');
+const { Op } = Sequelize;
 
 
 const productController = {
     index: async (req,res) => {
-        console.log(req.session.userData)
         const products = await productService.getAllProducts();
         res.render('main/home.ejs', {products, userData: req.session.userData });
     },
@@ -109,16 +110,20 @@ const productController = {
         res.redirect('/');
        
     },
-    // search: async (req, res) => {
-    //     const searchTerm = req.query.searchTerm;
-    //     const products = await Products.findAll({
-    //         where: {
-    //           name: {
-    //             [Op.like]: `%${searchTerm}%`,
-    //           },
-    //         },
-    //       });
-    // }
+    search: async (req, res) => {
+        const searchTerm = req.query.searchTerm;
+        console.log(searchTerm)
+        const products = await Products.findAll({
+             where: {
+              name: {
+                [Op.like]: `%${searchTerm}%`,
+               },
+             },
+           });
+           console.log(products)
+           res.render('product/productResults', {products, userData: req.session.userData})
+           
+     }
    
      
 }
