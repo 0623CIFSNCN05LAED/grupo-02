@@ -35,4 +35,6 @@ router.put("/detail/:id", upload.single("archivo"), productValidation, validateE
 
 router.delete("/:id", authenticated, productController.destroy);
 
+router.get("/results", productController.search)
+
 module.exports = router;

@@ -39,10 +39,10 @@
             <li> <a href='/product/discos'>Discos </a></li>
             <li> <a href='/product/maquinas'>Maquinas </a></li>
             <li> <a href='/product/otros'>Otros </a></li>
-            <!-- <p class='barra-busqueda'>
-                <input type="text" name="q" placeholder="Buscar aquí..."> <a href='product/search'><i
-                        class="fa-solid fa-magnifying-glass"></i> </a>
-            </p> -->
+            <form action="/product/results" method="get">
+                <input class = 'barra-busqueda' type="text" id="searchTerm" name="searchTerm" placeholder="Ingrese término de búsqueda">
+                <button type="submit" class="fa-solid fa-magnifying-glass"></button>
+              </form>
         </ul>
     </nav>
     </nav>
